@@ -46,6 +46,8 @@
             Only a small part of the work performed by our company is presented on the site. For 14 years on in the
             construction market we have made happy more than 1000 families
         </p>
+
+        <!-- сделал не списком ниже, а дифинишн листом. По-моему здесь логичнее некуда. -->
         <dl>
             <dt>City:</dt>
             <dd>Rostov-on-Don LCD admiral</dd>
@@ -64,25 +66,33 @@
             <button aria-label="back">
                 <img src="./img/icon/icon_arrow-left.svg" alt="">
             </button>
-            <button aria-label="selected slide">
-                <img src="./img/icon/icon_point_active.svg" alt="">
-            </button>
-            <button aria-label="next slide">
-                <img src="./img/icon/icon_point_no-active.svg" alt="">
-            </button>
-            <button aria-label="next slide">
-                <img src="./img/icon/icon_point_no-active.svg" alt="">
-            </button>
+            <ul>
+                <li>
+                    <button aria-label="selected slide">
+                        <img src="./img/icon/icon_point_active.svg" alt="">
+                    </button>
+                </li>
+                <li>
+                    <button aria-label="next slide">
+                        <img src="./img/icon/icon_point_no-active.svg" alt="">
+                    </button>
+                </li>
+                <li>
+                    <button aria-label="next slide">
+                        <img src="./img/icon/icon_point_no-active.svg" alt="">
+                    </button>
+                </li>
+            </ul>
             <button aria-label="forward">
                 <img src="./img/icon/icon_arrow-right.svg" alt="">
             </button>
         </div>
 
-        <div>
-            <button>Rostov-on-Don, Admiral</button>
-            <button>Sochi Thieves</button>
-            <button>Rostov-on-Don Patriotic</button>
-        </div>
+        <ul>
+            <li><button>Rostov-on-Don, Admiral</button></li>
+            <li><button>Sochi Thieves</button></li>
+            <li><button>Rostov-on-Don Patriotic</button></li>
+        </ul>
 
         <div>
             <button aria-label="back">
@@ -113,41 +123,135 @@
         </p>
 
         <form>
-            <label for="name">
+            <label>
                 Name
-                <input class="" type="text" id="name" placeholder="What is your name:">
+                <input class="" type="text" placeholder="What is your name:">
             </label>
 
-            <label for="phone">
+            <label>
                 Phone
-                <input class="" type="tel" id="phone" placeholder="Your phone number:">
+                <input class="" type="tel" placeholder="Your phone number:">
             </label>
 
             <button>SUBMIT</button>
 
-            <input class="" type="checkbox" id="checkbox" name="I agree to the processing of personal data">
-            <label for="checkbox">I agree to the processing of personal data</label>
-
+            <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                <span class="check__text">I agree to the processing of personal data</span>
+            </label>
         </form>
     </section>
+
     <section>
         <h2>TYPES OF REPAIR
             <img src="./img/icon/icon_tools-x.svg" alt="">
         </h2>
 
-        <article>
-            <img src="" alt="">
-            <h3>Redecorating</h3>
-            <ul>
-                <li>Dismantling of old coatings</li>
-                <li>Wallpapering</li>
-                <li>Painting walls and ceilings</li>
-                <li>Laying flooring</li>
-                <li>Replacing plumbing</li>
-                <li>Replacing sockets and switches</li>
-                <li>Replacing doors</li>
-        </article>
+        <ul class="list-tape-of-repair">
+            <li>
+                <img src="./img/type_repair-1.jpg" alt="">
+                <h3>Redecorating</h3>
+                <ul>
+                    <li>Dismantling of old coatings</li>
+                    <li>Wallpapering</li>
+                    <li>Painting walls and ceilings</li>
+                    <li>Laying flooring</li>
+                    <li>Replacing plumbing</li>
+                    <li>Replacing sockets and switches</li>
+                    <li>Replacing doors</li>
+                </ul>
+                <span>
+                    from 900 rub / m2
+                </span>
+            </li>
 
+            <li>
+                <img src="./img/type_repair-2.jpg" alt="">
+                <h3>Overhaul</h3>
+                <ul>
+                    <li>Dismantling of old coatings</li>
+                    <li>Wallpapering</li>
+                    <li>Painting walls and ceilings</li>
+                    <li>Laying flooring</li>
+                    <li>Replacing plumbing</li>
+                    <li>Replacing sockets and switches</li>
+                    <li>Replacing doors</li>
+                </ul>
+                <span>
+                    from 1800 rub / m2
+                </span>
+            </li>
+
+            <li>
+                <img src="./img/type_repair-3.jpg" alt="">
+                <h3>Designer Repair</h3>
+                <ul>
+                    <li>Dismantling of old coatings</li>
+                    <li>Wallpapering</li>
+                    <li>Painting walls and ceilings</li>
+                    <li>Laying flooring</li>
+                    <li>Replacing plumbing</li>
+                    <li>Replacing sockets and switches</li>
+                    <li>Replacing doors</li>
+                </ul>
+                <span>
+                    from 4000 rub / m2
+                </span>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <img src="./img/icon/icon_1.svg" alt="">
+                Our specialist will arrive for measurements per day
+                contact, or appoint a date convenient for you
+            </li>
+            <li>
+                <img src="./img/icon/icon_2.svg" alt="">
+                Free metering
+            </li>
+            <li>
+                <img src="./img/icon/icon_3.svg" alt="">
+                Free consultation
+            </li>
+            <li>
+                <img src="./img/icon/icon_4.svg" alt="">
+                Get a cost estimate and
+                the timing of your future repairs
+            </li>
+        </ul>
+
+        <form>
+            Leave a request for free departure of the measurer
+            <label>
+                Name
+                <input class="" type="text" placeholder="What is your name:">
+            </label>
+
+            <label>
+                Phone
+                <input class="" type="tel" placeholder="Your phone number:">
+            </label>
+
+            <label>
+                Email
+                <input class="" type="tel" placeholder="Your email:">
+            </label>
+
+            <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                <span class="check__text">I agree to the processing of personal data</span>
+            </label>
+
+            <button>CALL THE MEASURER</button>
+        </form>
+
+        <div>
+            <img src="./img/icon/icon_pig.svg" alt="">
+            Help save 10 - 20% of the cost of materials
+        </div>
     </section>
 
 </body>

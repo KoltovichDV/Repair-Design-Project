@@ -1,0 +1,53 @@
+/* На счет чеквокса ниже: Я специально не использую для скрытия чекбокса display: none;, т.к. считаю это не правильно и вредной привычкой. Если скрывать через дисплей нан, его не будет видно скринридерам и без мышки на клавиатуре нельзя будет переходить на него. Хотя валидатор такой вариант пройдет, но просто не заметит косяк */
+/* Check */
+.check {
+    display: block;
+    margin-left: 50%;
+}
+
+.check__input {
+    position: absolute width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.check__box {
+    position: absolute;
+    margin-left: -165px;
+    width: 18px;
+    height: 18px;
+    /* размер 18px из макета. Взял от туда только саму галочку, а блок нарисовал css-ом */
+    overflow: hidden;
+    background-color: #E3B873;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 2px;
+}
+
+/* Checked */
+.check__input:checked+.check__box {
+    background-color: #E3B873;
+    background-image: url(../img/icon/icon_check-v.svg);
+}
+
+/* Focused */
+.check__input:focus+.check__box {
+    box-shadow:
+        0 0 0 0.1em #131313;
+        /* цвет из макета, но дизайнер не прорисовал все состояния чекбокса. Поэтому додумываю сам */
+}
+
+/* Disabled */
+.check__input:disabled+.check__box {
+    box-shadow: 0 0 0 0.1em #9B9B9B;
+}
+
+.check__input:checked:disabled+.check__box {
+    background-color: #9B9B9B;
+}
+
+/* текст сопроваждающий чекбок. Смещение сделал, чтобы отцентровать */
+.check__text {
+    margin-left: -140px;
+}
