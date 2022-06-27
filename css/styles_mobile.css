@@ -1,3 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.body {
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.header {
+    background-color: #131313;
+
+}
+
+.header__container {
+    max-width: 1256px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    align-items: center;
+    gap: 95px 68px 45px;
+}
+
+.header__logo {
+    margin-right: 95px;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.header__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header__link--current {
+    color: #E3B873;
+}
+
+.header__telephone {
+    display: block;
+    min-width: max-content;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: right;
+    text-decoration-line: underline;
+    
+    color: #E3B873;
+}
+
+.button {
+    min-width: fit-content;
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    border: 0;
+    outline: 0;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.header__button {
+    width: 161px;
+    height: 37px;
+    font-style: italic;
+}
+
+.main {}
+
+/* section1 */
+.turnkey-repair {
+    background-color: #131313;
+    height: 707px;
+    background-image: url(../img/bg_big.jpg);
+    background-size: cover;
+}
+
+.turnkey-repair__img-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 707px;
+    margin-top: 83px;
+}
+
+.turnkey-repair__container {
+    height: auto;
+    max-width: 1171px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+
+}
+
+.turnkey-repair__title {
+    margin: 0;
+    padding-top: 194px;
+    width: 600px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 53px;
+
+    color: #FFFFFF;
+}
+
+.turnkey-repair__title--city {
+    color: #E3B873;
+}
+
+.turnkey-repair__text {
+    display: block;
+    width: 510px;
+    height: 89px;
+    margin-bottom: 45px;
+
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+}
+
+.turnkey-repair__button1 {
+    margin-right: 18px;
+    width: 207px;
+    height: 51px;
+}
+
+.turnkey-repair__button2 {
+    width: 207px;
+    height: 51px;
+
+    background: none;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
 /* На счет чеквокса ниже: Я специально не использую для скрытия чекбокса display: none;, т.к. считаю это не правильно и вредной привычкой. Если скрывать через дисплей нан, его не будет видно скринридерам и без мышки на клавиатуре нельзя будет переходить на него. Хотя валидатор такой вариант пройдет, но просто не заметит косяк */
 /* Check */
 .check {
@@ -35,7 +232,7 @@
 .check__input:focus+.check__box {
     box-shadow:
         0 0 0 0.1em #131313;
-        /* цвет из макета, но дизайнер не прорисовал все состояния чекбокса. Поэтому додумываю сам */
+    /* цвет из макета, но дизайнер не прорисовал все состояния чекбокса. Поэтому додумываю сам */
 }
 
 /* Disabled */
