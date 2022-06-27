@@ -18,6 +18,8 @@
 .body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .header {
@@ -47,13 +49,10 @@
     align-items: center;
     gap: 47px;
 
-    font-family: 'Nunito Sans', sans-serif;
     text-transform: uppercase;
 }
 
 .header__link {
-    font-style: normal;
-    font-weight: 400;
     font-size: 11px;
     line-height: 15px;
 
@@ -68,28 +67,23 @@
 .header__telephone {
     display: block;
     min-width: max-content;
-    font-family: 'Nunito Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
+
     font-size: 11px;
     line-height: 15px;
     text-align: right;
     text-decoration-line: underline;
-    
     color: #E3B873;
 }
 
 .button {
-    min-width: fit-content;
+    min-width: max-content;
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
     border: 0;
     outline: 0;
+    cursor: pointer;
 
-    font-family: 'Nunito Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 11px;
     line-height: 15px;
     text-align: center;
@@ -136,17 +130,18 @@
 }
 
 .title {
+    margin: 0;
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
 
 }
 
 .turnkey-repair__title {
-    margin: 0;
     padding-top: 194px;
     width: 600px;
-    font-style: normal;
-    font-weight: 400;
+
     font-size: 40px;
     line-height: 53px;
 
@@ -163,10 +158,6 @@
     height: 89px;
     margin-bottom: 45px;
 
-
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
     font-size: 22px;
     line-height: 36px;
 
@@ -188,9 +179,43 @@
     border-radius: 2px;
 }
 
+.completed-projects {
+    background-color: #131313;
+    height: 1074px;
+}
 
+.completed-projects__title {
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
 
+    color: #E3B873;
+}
 
+.completed-projects__text {
+    display: block;
+    width: 442px;
+    height: 86px;
+    margin-bottom: 45px;
+
+    font-size: 14px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+}
+
+.completed-projects__dl {
+    font-size: 18px;
+    line-height: 25px;
+    color: #E3B873;
+}
+
+.completed-projects__dd {
+    font-size: 13px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
 
 
 
