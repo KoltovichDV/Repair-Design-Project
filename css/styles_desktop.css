@@ -17,14 +17,15 @@
 
 .body {
     margin: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
 }
 
+/* header */
 .header {
     background-color: #131313;
 
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .header__container {
@@ -98,14 +99,20 @@
     font-style: italic;
 }
 
+
 .main {}
 
-/* section1 */
+
+/* section-1 turnkey-repair */
 .turnkey-repair {
     background-color: #131313;
     height: 707px;
     background-image: url(../img/bg_big.jpg);
     background-size: cover;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .turnkey-repair__img-overlay {
@@ -129,16 +136,12 @@
     z-index: 1;
 }
 
-.title {
+.turnkey-repair__title {
     margin: 0;
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     font-style: normal;
     font-weight: 400;
-
-}
-
-.turnkey-repair__title {
     padding-top: 194px;
     width: 600px;
 
@@ -179,12 +182,23 @@
     border-radius: 2px;
 }
 
+
+/* sectoin-2 completed-projects */
 .completed-projects {
     background-color: #131313;
     height: 1074px;
+
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .completed-projects__title {
+    margin: 0;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
     font-size: 27px;
     line-height: 37px;
     letter-spacing: -0.07em;
@@ -205,8 +219,13 @@
 }
 
 .completed-projects__dl {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
     font-size: 18px;
     line-height: 25px;
+    text-transform: uppercase;
+
     color: #E3B873;
 }
 
@@ -217,74 +236,33 @@
     color: #FFFFFF;
 }
 
-.realize-fantasies {}
+/* section-3 online-control */
+.online-control {
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
 
-.realize-fantasies__title {}
-
-
-.clients {}
-
-.clients__title {
+.online-control__title {
     font-size: 20px;
     line-height: 28px;
     text-align: center;
-    color: #181818;
-}
-
-.clients__text {
-    font-size: 18px;
-    line-height: 29px;
-    text-align: center;
-    color: #363636;
-}
-
-.clients__list {}
-
-.clients__name {
-    font-size: 18px;
-    line-height: 23px;
-    color: #181818;
-}
-
-.clients__avatar {}
-
-.clients__review {
-    font-size: 13px;
-    line-height: 180%;
-    color: #959595;
-}
-
-.clients__dimensions {
-    background-color: #E3B873;
-    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-    border: 0.75px solid #FFFFFF;
-
-
-    font-family: 'Yeseva One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 24px;
     text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-.clients__term {
-    background: #E3B873;
-    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-
-    font-family: 'Yeseva One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 24px;
 
     color: #FFFFFF;
 }
 
+.online-control__video {}
 
+.online-control__text {}
 
+.online-control__form {
+    display: flex;
+}
 
+.online-control__lable {}
+
+.online-control__input {}
 
 /* На счет чекбокса ниже: Я специально не использую для скрытия чекбокса display: none;, т.к. считаю это не правильно и вредной привычкой. Если скрывать через дисплей нан, его не будет видно скринридерам и без мышки на клавиатуре нельзя будет переходить на него. Хотя валидатор такой вариант пройдет, но просто не заметит косяк */
 /* Check */
@@ -339,3 +317,298 @@
 .check__text {
     margin-left: -140px;
 }
+
+
+/* section-4 tape-of-repair */
+.tape-of-repair {}
+
+.tape-of-repair__title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #181818;
+}
+
+.tape-of-repair__list {
+    display: flex;
+}
+
+.tape-of-repair__option {}
+
+.tape-of-repair__img {}
+
+.tape-of-repair__category {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #363636;
+}
+
+.tape-of-repair__description {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+
+    color: #959595;
+}
+
+.tape-of-repair__price {
+    background: #E3B873;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.tape-of-repair__freeze-request {
+    display: flex;
+}
+
+.tape-of-repair__freeze {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background-image: url(../img/bg_house.jpg);
+    height: 645px;
+}
+
+.tape-of-repair__form {
+    display: flex;
+    flex-direction: column;
+    width: 509px;
+    height: 506px;
+
+    background: #131313;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+
+}
+
+.tape-of-repair__text-form {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.tape-of-repair__button {}
+
+.tape-of-repair__discount {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #E3B873;
+
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+}
+
+
+
+/* section-5 realize-fantasies */
+.realize-fantasies {
+    background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.realize-fantasies__title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+
+    color: #E3B873;
+
+}
+
+.realize-fantasies__list {
+    list-style-type: none;
+}
+
+
+.realize-fantasies__button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
+
+    color: #FFFFFF;
+}
+
+.realize-fantasies__button--active {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    border-bottom: #E3B873;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
+
+    color: #E3B873;
+
+
+
+}
+
+/* section-6 clients */
+.clients {}
+
+.clients__title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #181818;
+}
+
+.clients__text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #363636;
+}
+
+.clients__list {
+    display: flex;
+}
+
+.clients__name {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #181818;
+}
+
+.clients__avatar {}
+
+.clients__review {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 180%;
+    /* or 23px */
+
+
+    color: #959595;
+}
+
+.clients__dimensions {
+    background-color: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    border: 0.75px solid #FFFFFF;
+
+
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.clients__term {
+    background: #E3B873;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+
+.clients__form {
+    display: flex;
+    flex-direction: column;
+    width: 509px;
+    height: 506px;
+
+    background: #131313;
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+}
+
+.clients__title-form {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+/* section-7 map */
+.map {}
+
+.map__address {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #E3B873;
+}
+
+.map__img {}
+
+.map__img-m {}

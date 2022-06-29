@@ -40,7 +40,7 @@
 
         <section class="turnkey-repair">
             <div class="turnkey-repair__container">
-                <h1 class="title turnkey-repair__title">
+                <h1 class="turnkey-repair__title">
                     Turnkey Repair in the city of
                     <span class="turnkey-repair__title--city">Rostov-on-Don</span>
                 </h1>
@@ -56,7 +56,7 @@
         </section>
 
         <section class="completed-projects">
-            <h2 class="title completed-projects__title">
+            <h2 class="completed-projects__title">
                 Completed <br>projects
             </h2>
             <p class="completed-projects__text">
@@ -66,16 +66,16 @@
 
             <!-- сделал не списком ниже, а дифинишн листом. По-моему здесь логичнее некуда. -->
             <dl>
-                <dt class="title completed-projects__dl">City:</dt>
+                <dt class="completed-projects__dl">City:</dt>
                 <dd class="completed-projects__dd">Rostov-on-Don LCD admiral</dd>
 
-                <dt class="title completed-projects__dl">apartment area:</dt>
+                <dt class="completed-projects__dl">apartment area:</dt>
                 <dd class="completed-projects__dd">81 m2</dd>
 
-                <dt class="title completed-projects__dl">Repair time:</dt>
+                <dt class="completed-projects__dl">Repair time:</dt>
                 <dd class="completed-projects__dd">3.5 months</dd>
 
-                <dt class="title completed-projects__dl">Repair Cost:</dt>
+                <dt class="completed-projects__dl">Repair Cost:</dt>
                 <dd class="completed-projects__dd">Upon request</dd>
             </dl>
 
@@ -125,16 +125,16 @@
 
         </section>
 
-        <section>
-            <h2>ONLINE CONTROL
+        <section class="online-control">
+            <h2 class="online-control__title">ONLINE CONTROL
                 <img src="./img/icon/icon_camera.svg" alt="">
             </h2>
-            <video width="817" height="434" poster="./img/video_slide_dark.jpg">
+            <video class="online-control__video" width="817" height="434" poster="./img/video_slide_dark.jpg">
             </video>
             <button aria-label="play"><img src="./img/icon/icon_play.svg" alt=""></button>
             <hr>
             <img src="./img/icon/icon_line.svg" alt="">
-            <p>
+            <p class="online-control__text">
                 At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time,
                 you
                 can go to our website and monitor the progress of work in your apartment. You can watch the live
@@ -142,37 +142,37 @@
                 from one of our facilities! <br> Leave a request below and you will receive a link to the broadcast.
             </p>
 
-            <form>
-                <label>
+            <form class="online-control__form">
+                <label class="online-control__lable">
                     Name
-                    <input class="" type="text" placeholder="What is your name:">
+                    <input class="online-control__input" type="text" placeholder="What is your name:">
                 </label>
 
-                <label>
+                <label class="online-control__lable">
                     Phone
-                    <input class="" type="tel" placeholder="Your phone number:">
+                    <input class="online-control__input" type="tel" placeholder="Your phone number:">
                 </label>
 
-                <button>SUBMIT</button>
+                <button class="button online-control__button">SUBMIT</button>
 
-                <label class="check">
-                    <input class="check__input" type="checkbox">
-                    <span class="check__box"></span>
-                    <span class="check__text">I agree to the processing of personal data</span>
-                </label>
             </form>
+            <label class="check">
+                <input class="check__input" type="checkbox">
+                <span class="check__box"></span>
+                <span class="check__text">I agree to the processing of personal data</span>
+            </label>
         </section>
 
         <section class="tape-of-repair">
-            <h2 class="title tape-of-repair__title">TYPES OF REPAIR
+            <h2 class="tape-of-repair__title">TYPES OF REPAIR
                 <img src="./img/icon/icon_tools-x.svg" alt="">
             </h2>
 
             <ul class="tape-of-repair__list">
-                <li>
-                    <img src="./img/type_repair-1.jpg" alt="">
-                    <h3>Redecorating</h3>
-                    <ul>
+                <li class="tape-of-repair__option">
+                    <img class="tape-of-repair__img" src="./img/type_repair-1.jpg" alt="">
+                    <h3 class="tape-of-repair__category">Redecorating</h3>
+                    <ul class="tape-of-repair__description">
                         <li>Dismantling of old coatings</li>
                         <li>Wallpapering</li>
                         <li>Painting walls and ceilings</li>
@@ -181,15 +181,15 @@
                         <li>Replacing sockets and switches</li>
                         <li>Replacing doors</li>
                     </ul>
-                    <span>
+                    <span class="tape-of-repair__price">
                         from 900 rub / m2
                     </span>
                 </li>
 
-                <li>
-                    <img src="./img/type_repair-2.jpg" alt="">
-                    <h3>Overhaul</h3>
-                    <ul>
+                <li class="tape-of-repair__option">
+                    <img class="tape-of-repair__img" src="./img/type_repair-2.jpg" alt="">
+                    <h3 class="tape-of-repair__category">Overhaul</h3>
+                    <ul class="tape-of-repair__description">
                         <li>Dismantling of old coatings</li>
                         <li>Wallpapering</li>
                         <li>Painting walls and ceilings</li>
@@ -198,15 +198,15 @@
                         <li>Replacing sockets and switches</li>
                         <li>Replacing doors</li>
                     </ul>
-                    <span>
+                    <span class="tape-of-repair__price">
                         from 1800 rub / m2
                     </span>
                 </li>
 
-                <li>
-                    <img src="./img/type_repair-3.jpg" alt="">
-                    <h3>Designer Repair</h3>
-                    <ul>
+                <li class="tape-of-repair__option">
+                    <img class="tape-of-repair__img" src="./img/type_repair-3.jpg" alt="">
+                    <h3 class="tape-of-repair__category">Designer Repair</h3>
+                    <ul class="tape-of-repair__description">
                         <li>Dismantling of old coatings</li>
                         <li>Wallpapering</li>
                         <li>Painting walls and ceilings</li>
@@ -215,81 +215,84 @@
                         <li>Replacing sockets and switches</li>
                         <li>Replacing doors</li>
                     </ul>
-                    <span>
+                    <span class="tape-of-repair__price">
                         from 4000 rub / m2
                     </span>
                 </li>
             </ul>
+            <div class="tape-of-repair__freeze-request">
 
-            <ul>
-                <li>
-                    <img src="./img/icon/icon_1.svg" alt="">
-                    Our specialist will arrive for measurements per day
-                    contact, or appoint a date convenient for you
-                </li>
-                <li>
-                    <img src="./img/icon/icon_2.svg" alt="">
-                    Free metering
-                </li>
-                <li>
-                    <img src="./img/icon/icon_3.svg" alt="">
-                    Free consultation
-                </li>
-                <li>
-                    <img src="./img/icon/icon_4.svg" alt="">
-                    Get a cost estimate and
-                    the timing of your future repairs
-                </li>
-            </ul>
+                <ul class="tape-of-repair__freeze">
+                    <li>
+                        <img src="./img/icon/icon_1.svg" alt="">
+                        Our specialist will arrive for measurements per day
+                        contact, or appoint a date convenient for you
+                    </li>
+                    <li>
+                        <img src="./img/icon/icon_2.svg" alt="">
+                        Free metering
+                    </li>
+                    <li>
+                        <img src="./img/icon/icon_3.svg" alt="">
+                        Free consultation
+                    </li>
+                    <li>
+                        <img src="./img/icon/icon_4.svg" alt="">
+                        Get a cost estimate and
+                        the timing of your future repairs
+                    </li>
+                </ul>
 
-            <form>
-                Leave a request for free departure of the measurer
-                <label>
-                    Name
-                    <input class="" type="text" placeholder="What is your name:">
-                </label>
+                <form class="tape-of-repair__form">
+                    <p class="tape-of-repair__text-form">Leave a request for free departure of the measurer</p>
+                    <label>
+                        Name
+                        <input class="" type="text" placeholder="What is your name:">
+                    </label>
 
-                <label>
-                    Phone
-                    <input class="" type="tel" placeholder="Your phone number:">
-                </label>
+                    <label>
+                        Phone
+                        <input class="" type="tel" placeholder="Your phone number:">
+                    </label>
 
-                <label>
-                    Email
-                    <input class="" type="tel" placeholder="Your email:">
-                </label>
+                    <label>
+                        Email
+                        <input class="" type="tel" placeholder="Your email:">
+                    </label>
 
-                <label class="check">
-                    <input class="check__input" type="checkbox">
-                    <span class="check__box"></span>
-                    <span class="check__text">I agree to the processing of personal data</span>
-                </label>
+                    <label class="check">
+                        <input class="check__input" type="checkbox">
+                        <span class="check__box"></span>
+                        <span class="check__text">I agree to the processing of personal data</span>
+                    </label>
 
-                <button>CALL THE MEASURER</button>
-            </form>
-
-            <div>
-                <img src="./img/icon/icon_pig.svg" alt="">
-                Help save 10 - 20% of the cost of materials
+                    <button class="button tape-of-repair__button">CALL THE MEASURER</button>
+                </form>
             </div>
+            <div class="tape-of-repair__discount">
+                <img src="./img/icon/icon_pig.svg" alt="">
+                Help save 10 - 20% of the <br>cost of materials
+            </div>
+
         </section>
 
         <section class="realize-fantasies">
-            <h2 class=" title realize-fantasies__title">
+            <h2 class="realize-fantasies__title">
                 We realize your <br>wildest fantasies
             </h2>
-            <ul>
-                <li>American classic</li>
-                <li>Empire</li>
-                <li>Classical</li>
-                <li>Loft</li>
-                <li>Minimalism</li>
-                <li>Provence</li>
-                <li>Romanticism</li>
-                <li>Scandinavian style</li>
-                <li>Mediterranean style</li>
-                <li>High tech</li>
-                <li>Eclecticism</li>
+            <ul class="realize-fantasies__list">
+                <li class=""><button class="realize-fantasies__button--active">American
+                        classic</button></li>
+                <li><button class="realize-fantasies__button">Empire</button></li>
+                <li><button class="realize-fantasies__button">Classical</button></li>
+                <li><button class="realize-fantasies__button">Loft</button></li>
+                <li><button class="realize-fantasies__button">Minimalism</button></li>
+                <li><button class="realize-fantasies__button">Provence</button></li>
+                <li><button class="realize-fantasies__button">Romanticism</button></li>
+                <li><button class="realize-fantasies__button">Scandinavian style</button></li>
+                <li><button class="realize-fantasies__button">Mediterranean style</button></li>
+                <li><button class="realize-fantasies__button">High tech</button></li>
+                <li><button class="realize-fantasies__button">Eclecticism</button></li>
             </ul>
             <img src="./img/fantasies-1-m.jpg" alt="">
             <img src="./img/fantasies-1.jpg" alt="">
@@ -299,7 +302,7 @@
         </section>
 
         <section class="clients">
-            <h2 class="title clients__title">
+            <h2 class="clients__title">
                 our clients
                 <img src="./img/icon/icon_handshake.svg" alt="">
             </h2>
@@ -307,9 +310,10 @@
                 80% of our customers recommend us to their
                 friends and family.
             </p>
+
             <ul class="clients__list">
                 <li>
-                    <h3 class="title clients__name">
+                    <h3 class="clients__name">
                         <img class="clients__avatar" src="./img/avatar_1.jpg" alt="">
                         Fedosova Maria Konstantinovna
                     </h3>
@@ -333,11 +337,109 @@
                     </span>
                 </li>
 
+                <li>
+                    <h3 class="clients__name">
+                        <img class="clients__avatar" src="./img/avatar_2.jpg" alt="">
+                        Afanasyev Sergey Alexandrovich
+                    </h3>
+                    <p class="clients__review">
+                        I want to thank the guys for their work. We put your shower part in repair. I am very grateful
+                        that I referred to the repair as to my own. Great thanks I express the project
+                        to Georgia for its professionalism and approach.
+                    </p>
+                    <p class="clients__review">
+                        The repair process was turned out in terms, faster than anticipated. Team mobile and
+                        professional. Works performed qualitatively without comments. Quality satisfied. Prices
+                        democratic. I recommend these masters.
+                    </p>
+                    <span class="clients__dimensions">
+                        <img src="./img/icon/icon_xy.svg" alt="">
+                        90 M2
+                    </span>
+                    <span class="clients__term">
+                        <img src="./img/icon/icon_diary.svg" alt="">
+                        128 DAYS
+                    </span>
+                </li>
+                <li>
+                    <h3 class="clients__name">
+                        <img class="clients__avatar" src="./img/avatar_3.jpg" alt="">
+                        Kiriev Egor Leonidovich
+                    </h3>
+                    <p class="clients__review">
+                        I want to thank the guys for their work. We put your shower part in repair. I am very grateful
+                        that I referred to the repair as to my own. Great thanks I express the project
+                        to Georgia for its professionalism and approach.
+                    </p>
+                    <p class="clients__review">
+                        The repair process was turned out in terms, faster than anticipated. Team mobile and
+                        professional. Works performed qualitatively without comments. Quality satisfied. Prices
+                        democratic. I recommend these masters.
+                    </p>
+                    <span class="clients__dimensions">
+                        <img src="./img/icon/icon_xy.svg" alt="">
+                        56 M2
+                    </span>
+                    <span class="clients__term">
+                        <img src="./img/icon/icon_diary.svg" alt="">
+                        86 DAYS
+                    </span>
+                </li>
             </ul>
 
+            <form class="clients__form">
+                <p class="clients__title-form">Have Any Questions?</p>
+                <label>
+                    Name
+                    <input class="" type="text" placeholder="What is your name:">
+                </label>
+
+                <label>
+                    Phone
+                    <input class="" type="tel" placeholder="Your phone number:">
+                </label>
+
+                <label>
+                    Question
+                    <input class="" type="tel" placeholder="I want to know:">
+                </label>
+
+                <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    <span class="check__text">I agree to the processing of personal data</span>
+                </label>
+
+                <button class="button clients__button">Submit</button>
+            </form>
         </section>
 
+        <section class="map">
+            <address class="map__address">
+                Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29
+            </address>
+            <a href="./blank.html"><img src="./img/icon/icon_e-mail.svg" alt="e-mail"></a>
+            <a href="./blank.html"><img src="./img/icon/icon_instagram.svg" alt="instagram"></a>
+            <img class="map__img" src="./img/map.jpg" alt="shopping center map">
+            <img class="map__img-m" src="./img/map-m.jpg" alt="shopping center map">
+        </section>
     </main>
+    <footer class="header">
+        <div class="header__container">
+            <img class="header__logo" src="./img/Logo-IC_Repair-Design-Project.svg" alt="Logo IC Repair Design Project"
+                width="180" height="10">
+            <nav class="header__navigation">
+                <a class="header__link header__link--current" href="./index.html">Home</a>
+                <a class="header__link" href="./blank.html">PROJECTS</a>
+                <a class="header__link" href="./blank.html">MEASUREMENT</a>
+                <a class="header__link" href="./blank.html">TEAM</a>
+                <a class="header__link" href="./blank.html">REVIEWS</a>
+                <a class="header__link" href="./blank.html">CONTACTS</a>
+            </nav>
+            <a class="header__telephone" href="./blank.html" target="_blank">+7 (928) 768-32-39</a>
+            <button class="button header__button">REQUEST A CALL</button>
+        </div>
+    </footer>
 
 </body>
 
