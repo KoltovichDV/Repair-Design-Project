@@ -128,48 +128,55 @@
                         </li>
                     </ul>
 
-                    <img class="hide-on-mobile" src="./img/slide1.jpg" alt="">
+                    <img class="completed-projects__slide hide-on-mobile" src="./img/slide1.jpg" width="679"
+                        height="482" alt="">
                     <img class="show-on-mobile" src="./img/slide2-m.jpg" alt="">
                 </div>
             </div>
         </section>
 
         <section class="online-control">
-            <h2 class="online-control__title">ONLINE CONTROL
-                <img src="./img/icon/icon_camera.svg" alt="">
-            </h2>
-            <video class="online-control__video" width="817" height="434" poster="./img/video_slide_dark.jpg">
-            </video>
-            <button aria-label="play"><img src="./img/icon/icon_play.svg" alt=""></button>
-            <hr>
-            <img src="./img/icon/icon_line.svg" alt="">
-            <p class="online-control__text">
-                At each facility, a camera is installed that broadcasts the progress of work on the clock. At any time,
-                you
-                can go to our website and monitor the progress of work in your apartment. You can watch the live
-                broadcast
-                from one of our facilities! <br> Leave a request below and you will receive a link to the broadcast.
-            </p>
+            <div class="online-control__container">
+                <h2 class="online-control__title">ONLINE CONTROL
+                    <img class="online-control__logo" src="./img/icon/icon_camera.svg" alt="">
+                </h2>
+                <div class="online-control__video-container">
+                    <video class="online-control__video" width="817" height="434" poster="./img/video_slide_dark.jpg">
+                    </video>
+                    <button class="online-control__play-button" aria-label="play"><img src="./img/icon/icon_play.svg"
+                            alt=""></button>
+                </div>
+                <hr>
+                <img src="./img/icon/icon_line.svg" alt="">
+                <p class="online-control__text">
+                    At each facility, a camera is installed that broadcasts the progress of work on the clock. At any
+                    time,
+                    you
+                    can go to our website and monitor the progress of work in your apartment. You can watch the live
+                    broadcast
+                    from one of our facilities! <br> Leave a request below and you will receive a link to the broadcast.
+                </p>
 
-            <form class="online-control__form">
-                <label class="online-control__lable">
-                    Name
-                    <input class="online-control__input" type="text" placeholder="What is your name:">
+                <form class="online-control__form">
+                    <label class="online-control__lable">
+                        Name
+                        <input class="online-control__input" type="text" placeholder="What is your name:">
+                    </label>
+
+                    <label class="online-control__lable">
+                        Phone
+                        <input class="online-control__input" type="tel" placeholder="Your phone number:">
+                    </label>
+
+                    <button class="button online-control__button">SUBMIT</button>
+
+                </form>
+                <label class="check">
+                    <input class="check__input" type="checkbox">
+                    <span class="check__box"></span>
+                    <span class="check__text">I agree to the processing of personal data</span>
                 </label>
-
-                <label class="online-control__lable">
-                    Phone
-                    <input class="online-control__input" type="tel" placeholder="Your phone number:">
-                </label>
-
-                <button class="button online-control__button">SUBMIT</button>
-
-            </form>
-            <label class="check">
-                <input class="check__input" type="checkbox">
-                <span class="check__box"></span>
-                <span class="check__text">I agree to the processing of personal data</span>
-            </label>
+            </div>
         </section>
 
         <section class="tape-of-repair">
@@ -180,16 +187,18 @@
             <ul class="tape-of-repair__list">
                 <li class="tape-of-repair__option">
                     <img class="tape-of-repair__img" src="./img/type_repair-1.jpg" alt="">
-                    <h3 class="tape-of-repair__category">Redecorating</h3>
-                    <ul class="tape-of-repair__description">
-                        <li>Dismantling of old coatings</li>
-                        <li>Wallpapering</li>
-                        <li>Painting walls and ceilings</li>
-                        <li>Laying flooring</li>
-                        <li>Replacing plumbing</li>
-                        <li>Replacing sockets and switches</li>
-                        <li>Replacing doors</li>
-                    </ul>
+                    <div class="tape-of-repair__substrate">
+                        <h3 class="tape-of-repair__category">Redecorating</h3>
+                        <ul class="tape-of-repair__description">
+                            <li>Dismantling of old coatings</li>
+                            <li>Wallpapering</li>
+                            <li>Painting walls and ceilings</li>
+                            <li>Laying flooring</li>
+                            <li>Replacing plumbing</li>
+                            <li>Replacing sockets and switches</li>
+                            <li>Replacing doors</li>
+                        </ul>
+                    </div>
                     <span class="tape-of-repair__price">
                         from 900 rub / m2
                     </span>
@@ -306,9 +315,9 @@
                         <li><button class="realize-fantasies__button">Eclecticism</button></li>
                     </ul>
                 </div>
-    
+
                 <img class="show-on-mobile" src="./img/fantasies-1-m.jpg" alt="">
-    
+
                 <div class="realize-fantasies__slide-show hide-on-mobile">
                     <img src="./img/fantasies-1.jpg" alt="">
                     <img src="./img/fantasies-2.jpg" alt="">
@@ -435,10 +444,15 @@
             <address class="map__address">
                 Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29
             </address>
-            <a href="./blank.html"><img src="./img/icon/icon_e-mail.svg" alt="e-mail"></a>
-            <a href="./blank.html"><img src="./img/icon/icon_instagram.svg" alt="instagram"></a>
-            <img class="map__img hide-on-mobile" src="./img/map.jpg" alt="shopping center map">
-            <img class="map__img-m show-on-mobile" src="./img/map-m.jpg" alt="shopping center map">
+
+            <div class="map__icons">
+                <a href="./blank.html"><img src="./img/icon/icon_e-mail.svg" alt="e-mail"></a>
+                <a href="./blank.html"><img src="./img/icon/icon_instagram.svg" alt="instagram"></a>
+            </div>
+
+            <img class="map__img hide-on-mobile" src="./img/map.jpg" width="925" height="466" alt="shopping center map">
+            <img class="map__img-m show-on-mobile" src="./img/map-m.jpg" width="340" height="255"
+                alt="shopping center map">
         </section>
     </main>
     <footer class="header">
