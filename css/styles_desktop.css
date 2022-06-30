@@ -15,6 +15,28 @@
     overflow: hidden;
 }
 
+/* класс для скрытия на мобильнике */
+.hide-on-mobile {
+    display: inline;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+/* класс для показа только на мобильнике */
+.show-on-mobile {
+    display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .show-on-mobile {
+        display: inline;
+    }
+}
+
 .body {
     margin: 0;
 }
@@ -98,9 +120,6 @@
     height: 37px;
     font-style: italic;
 }
-
-
-.main {}
 
 
 /* section-1 turnkey-repair */
@@ -193,6 +212,56 @@
     font-weight: 400;
 }
 
+.completed-projects__container {
+    display: flex;
+    height: auto;
+    max-width: 1171px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.completed-projects__box1 {}
+
+.completed-projects__box2 {}
+
+.completed-projects__top-nav {
+    display: flex;
+    gap: 60px;
+    margin: 0;
+}
+
+.completed-projects__button-top-nav {
+    background: none;
+    border: 0;
+
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.completed-projects__button-top-nav--active {
+    background: none;
+    border: 0;
+
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 9px;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid;
+    padding-bottom: 7px;
+    padding-left: 0;
+    padding-right: 0;
+    color: #E3B873;
+}
+
 .completed-projects__title {
     margin: 0;
     font-family: 'Yeseva One', cursive;
@@ -218,7 +287,9 @@
     color: #FFFFFF;
 }
 
-.completed-projects__dl {
+.completed-projects__dl {}
+
+.completed-projects__dt {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
@@ -235,6 +306,16 @@
 
     color: #FFFFFF;
 }
+
+.completed-projects__nav {
+    display: flex;
+}
+
+.completed-projects__button-nav {
+    background: none;
+    border: 0;
+}
+
 
 /* section-3 online-control */
 .online-control {
@@ -436,6 +517,34 @@
 /* section-5 realize-fantasies */
 .realize-fantasies {
     background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+    
+    height: 864px;
+    background-image: url(../img/bg_fantasies_dark.jpg);
+    background-size: cover;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
+}
+
+.realize-fantasies__container {
+    height: auto;
+    max-width: 1171px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+    display: flex;
+}
+
+.realize-fantasies__box-links {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
 }
 
 .realize-fantasies__title {
@@ -452,6 +561,7 @@
 
 .realize-fantasies__list {
     list-style-type: none;
+    padding: 0;
 }
 
 
@@ -461,12 +571,6 @@
     outline: 0;
     cursor: pointer;
 
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 38px;
-
     color: #FFFFFF;
 }
 
@@ -475,20 +579,16 @@
     border: 0;
     outline: 0;
     cursor: pointer;
-
-    border-bottom: #E3B873;
-
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 38px;
+    border-bottom: 1px solid #E3B873;
+    padding: 0;
 
     color: #E3B873;
+}
 
-
+.realize-fantasies__slide-show {
 
 }
+
 
 /* section-6 clients */
 .clients {}
