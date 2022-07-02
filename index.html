@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Yeseva+One&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles_mobile.css">
     <link rel="stylesheet" href="./css/styles_desktop.css">
+    <link rel="stylesheet" href="./css/styles_mobile.css">
 
     <title>Turnkey Repair in the city of Rostov-on-Don</title>
 </head>
@@ -32,7 +32,7 @@
                 <a class="header__link" href="./blank.html">CONTACTS</a>
             </nav>
             <a class="header__telephone" href="./blank.html" target="_blank">+7 (928) 768-32-39</a>
-            <button class="button header__button hide-on-mobile">REQUEST A CALL</button>
+            <button class="header__button">REQUEST A CALL</button>
         </div>
     </header>
 
@@ -57,30 +57,49 @@
 
         <section class="completed-projects">
             <div class="completed-projects__container">
-
-                <div class="completed-projects__box1">
+                <ul class="completed-projects__top-nav">
+                    <li>
+                        <button class="completed-projects__button-top-nav--active">Rostov-on-Don, Admiral</button>
+                    </li>
+                    <li>
+                        <button class="completed-projects__button-top-nav">Sochi Thieves</button>
+                    </li>
+                    <li>
+                        <button class="completed-projects__button-top-nav">Rostov-on-Don Patriotic</button>
+                    </li>
+                </ul>
+                <div class="completed-projects__box">
                     <h2 class="completed-projects__title">
                         Completed <br>projects
                     </h2>
                     <p class="completed-projects__text">
-                        Only a small part of the work performed by our company is presented on the site. For 14 years on
+                        Only a small part of the work performed by our company is presented on the site. For 14
+                        years on
                         in the
                         construction <br>market we have made happy more than 1000 families
                     </p>
 
                     <!-- сделал не списком ниже, а дифинишн листом. По-моему здесь логичнее некуда. -->
                     <dl class="completed-projects__dl">
-                        <dt class="completed-projects__dt">City:</dt>
-                        <dd class="completed-projects__dd">Rostov-on-Don LCD admiral</dd>
+                        <div>
+                            <dt class="completed-projects__dt">City:</dt>
+                            <dd class="completed-projects__dd">Rostov-on-Don LCD admiral</dd>
+                        </div>
 
-                        <dt class="completed-projects__dt">apartment area:</dt>
-                        <dd class="completed-projects__dd">81 m2</dd>
+                        <div>
+                            <dt class="completed-projects__dt">apartment area:</dt>
+                            <dd class="completed-projects__dd">81 m2</dd>
+                        </div>
 
-                        <dt class="completed-projects__dt">Repair time:</dt>
-                        <dd class="completed-projects__dd">3.5 months</dd>
+                        <div>
+                            <dt class="completed-projects__dt">Repair time:</dt>
+                            <dd class="completed-projects__dd">3.5 months</dd>
+                        </div>
 
-                        <dt class="completed-projects__dt">Repair Cost:</dt>
-                        <dd class="completed-projects__dd">Upon request</dd>
+                        <div>
+                            <dt class="completed-projects__dt">Repair Cost:</dt>
+                            <dd class="completed-projects__dd">Upon request</dd>
+                            </di>
                     </dl>
 
                     <div class="completed-projects__nav">
@@ -105,32 +124,19 @@
                         </button>
                     </div>
 
-                    <div class="show-on-mobile">
-                        <button aria-label="back">
-                            <img src="./img/icon/icon_round_arrow-left.svg" alt="">
-                        </button>
-                        <button aria-label="forward">
-                            <img src="./img/icon/icon_round_arrow-right.svg" alt="">
-                        </button>
+                    <div class="completed-projects__img-box">
+                        <img class="completed-projects__slide" src="./img/slide1.jpg" width="679" height="482" alt="">
+                        <img class="completed-projects__slide-mobile" src="./img/slide2-m.jpg" alt="">
+
+                        <div class="completed-projects__controls-mobile">
+                            <button aria-label="back">
+                                <img src="./img/icon/icon_round_arrow-left.svg" alt="">
+                            </button>
+                            <button aria-label="forward">
+                                <img src="./img/icon/icon_round_arrow-right.svg" alt="">
+                            </button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="completed-projects__box2">
-                    <ul class="completed-projects__top-nav">
-                        <li class="hide-on-mobile">
-                            <button class="completed-projects__button-top-nav--active">Rostov-on-Don, Admiral</button>
-                        </li>
-                        <li class="hide-on-mobile">
-                            <button class="completed-projects__button-top-nav">Sochi Thieves</button>
-                        </li>
-                        <li class="hide-on-mobile">
-                            <button class="completed-projects__button-top-nav">Rostov-on-Don Patriotic</button>
-                        </li>
-                    </ul>
-
-                    <img class="completed-projects__slide hide-on-mobile" src="./img/slide1.jpg" width="679"
-                        height="482" alt="">
-                    <img class="show-on-mobile" src="./img/slide2-m.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -143,8 +149,10 @@
                 <div class="online-control__video-container">
                     <video class="online-control__video" width="817" height="434" poster="./img/video_slide_dark.jpg">
                     </video>
-                    <button class="online-control__play-button" aria-label="play"><img src="./img/icon/icon_play.svg"
-                            alt=""></button>
+                    <button class="online-control__play-button" aria-label="play">
+                        <img class="online-control__play-button-img" src="./img/icon/icon_play.svg" width="145"
+                            height="145" alt="">
+                    </button>
                 </div>
                 <hr>
                 <img src="./img/icon/icon_line.svg" alt="">
@@ -179,17 +187,17 @@
             </div>
         </section>
 
-        <section class="tape-of-repair">
-            <h2 class="tape-of-repair__title">TYPES OF REPAIR
+        <section class="types-of-repair">
+            <h2 class="types-of-repair__title">TYPES OF REPAIR
                 <img src="./img/icon/icon_tools-x.svg" alt="">
             </h2>
 
-            <ul class="tape-of-repair__list">
-                <li class="tape-of-repair__option">
-                    <img class="tape-of-repair__img" src="./img/type_repair-1.jpg" alt="">
-                    <div class="tape-of-repair__substrate">
-                        <h3 class="tape-of-repair__category">Redecorating</h3>
-                        <ul class="tape-of-repair__description">
+            <ul class="types-of-repair__list">
+                <li class="types-of-repair__option">
+                    <img class="types-of-repair__img" src="./img/type_repair-1.jpg" alt="">
+                    <div class="types-of-repair__substrate">
+                        <h3 class="types-of-repair__category">Redecorating</h3>
+                        <ul class="types-of-repair__description">
                             <li>Dismantling of old coatings</li>
                             <li>Wallpapering</li>
                             <li>Painting walls and ceilings</li>
@@ -199,15 +207,15 @@
                             <li>Replacing doors</li>
                         </ul>
                     </div>
-                    <span class="tape-of-repair__price">
+                    <span class="types-of-repair__price">
                         from 900 rub / m2
                     </span>
                 </li>
 
-                <li class="tape-of-repair__option">
-                    <img class="tape-of-repair__img" src="./img/type_repair-2.jpg" alt="">
-                    <h3 class="tape-of-repair__category">Overhaul</h3>
-                    <ul class="tape-of-repair__description">
+                <li class="types-of-repair__option">
+                    <img class="types-of-repair__img" src="./img/type_repair-2.jpg" alt="">
+                    <h3 class="types-of-repair__category">Overhaul</h3>
+                    <ul class="types-of-repair__description">
                         <li>Dismantling of old coatings</li>
                         <li>Wallpapering</li>
                         <li>Painting walls and ceilings</li>
@@ -216,15 +224,15 @@
                         <li>Replacing sockets and switches</li>
                         <li>Replacing doors</li>
                     </ul>
-                    <span class="tape-of-repair__price">
+                    <span class="types-of-repair__price">
                         from 1800 rub / m2
                     </span>
                 </li>
 
-                <li class="tape-of-repair__option">
-                    <img class="tape-of-repair__img" src="./img/type_repair-3.jpg" alt="">
-                    <h3 class="tape-of-repair__category">Designer Repair</h3>
-                    <ul class="tape-of-repair__description">
+                <li class="types-of-repair__option">
+                    <img class="types-of-repair__img" src="./img/type_repair-3.jpg" alt="">
+                    <h3 class="types-of-repair__category">Designer Repair</h3>
+                    <ul class="types-of-repair__description">
                         <li>Dismantling of old coatings</li>
                         <li>Wallpapering</li>
                         <li>Painting walls and ceilings</li>
@@ -233,14 +241,14 @@
                         <li>Replacing sockets and switches</li>
                         <li>Replacing doors</li>
                     </ul>
-                    <span class="tape-of-repair__price">
+                    <span class="types-of-repair__price">
                         from 4000 rub / m2
                     </span>
                 </li>
             </ul>
-            <div class="tape-of-repair__freeze-request">
+            <div class="types-of-repair__freeze-request">
 
-                <ul class="tape-of-repair__freeze">
+                <ul class="types-of-repair__freeze">
                     <li>
                         <img src="./img/icon/icon_1.svg" alt="">
                         Our specialist will arrive for measurements per day
@@ -261,69 +269,73 @@
                     </li>
                 </ul>
 
-                <form class="tape-of-repair__form">
-                    <p class="tape-of-repair__text-form">Leave a request for free departure of the measurer</p>
-                    <label>
-                        Name
-                        <input class="" type="text" placeholder="What is your name:">
-                    </label>
-
-                    <label>
-                        Phone
-                        <input class="" type="tel" placeholder="Your phone number:">
-                    </label>
-
-                    <label>
-                        Email
-                        <input class="" type="tel" placeholder="Your email:">
-                    </label>
-
+                <div class="types-of-repair__wrapping-form">
+                    <h3 class="types-of-repair__title-form">
+                        Leave a request for free <br>departure of the measurer
+                    </h3>
+                    <form class="types-of-repair__form">
+                        <label class="types-of-repair__label">
+                            Name
+                            <input class="types-of-repair__input" type="text" placeholder="What is your name:">
+                        </label>
+    
+                        <label class="types-of-repair__label">
+                            Phone
+                            <input class="types-of-repair__input" type="tel" placeholder="Your phone number:">
+                        </label>
+    
+                        <label class="types-of-repair__label">
+                            Email
+                            <input class="types-of-repair__input" type="email" placeholder="Your email:">
+                        </label>
+    
+                    </form>
                     <label class="check">
                         <input class="check__input" type="checkbox">
                         <span class="check__box"></span>
-                        <span class="check__text">I agree to the processing of personal data</span>
+                        <span class="check__text--white">I agree to the processing of personal data</span>
                     </label>
 
-                    <button class="button tape-of-repair__button">CALL THE MEASURER</button>
-                </form>
+                    <button class="button types-of-repair__button">CALL THE MEASURER</button>
+                </div>
             </div>
-            <div class="tape-of-repair__discount">
+            <div class="types-of-repair__discount">
                 <img src="./img/icon/icon_pig.svg" alt="">
                 Help save 10 - 20% of the <br>cost of materials
             </div>
 
         </section>
 
-        <section class="realize-fantasies">
-            <div class="realize-fantasies__container">
-                <div class="realize-fantasies__box-links">
-                    <h2 class="realize-fantasies__title">
+        <section class="we-realize-fantasies">
+            <div class="we-realize-fantasies__container">
+                <div class="we-realize-fantasies__box-links">
+                    <h2 class="we-realize-fantasies__title">
                         We realize your <br>wildest fantasies
                     </h2>
-                    <ul class="realize-fantasies__list hide-on-mobile">
-                        <li class=""><button class="realize-fantasies__button--active">American
+                    <ul class="we-realize-fantasies__list">
+                        <li class=""><button class="we-realize-fantasies__button--active">American
                                 classic</button></li>
-                        <li><button class="realize-fantasies__button">Empire</button></li>
-                        <li><button class="realize-fantasies__button">Classical</button></li>
-                        <li><button class="realize-fantasies__button">Loft</button></li>
-                        <li><button class="realize-fantasies__button">Minimalism</button></li>
-                        <li><button class="realize-fantasies__button">Provence</button></li>
-                        <li><button class="realize-fantasies__button">Romanticism</button></li>
-                        <li><button class="realize-fantasies__button">Scandinavian style</button></li>
-                        <li><button class="realize-fantasies__button">Mediterranean style</button></li>
-                        <li><button class="realize-fantasies__button">High tech</button></li>
-                        <li><button class="realize-fantasies__button">Eclecticism</button></li>
+                        <li><button class="we-realize-fantasies__button">Empire</button></li>
+                        <li><button class="we-realize-fantasies__button">Classical</button></li>
+                        <li><button class="we-realize-fantasies__button">Loft</button></li>
+                        <li><button class="we-realize-fantasies__button">Minimalism</button></li>
+                        <li><button class="we-realize-fantasies__button">Provence</button></li>
+                        <li><button class="we-realize-fantasies__button">Romanticism</button></li>
+                        <li><button class="we-realize-fantasies__button">Scandinavian style</button></li>
+                        <li><button class="we-realize-fantasies__button">Mediterranean style</button></li>
+                        <li><button class="we-realize-fantasies__button">High tech</button></li>
+                        <li><button class="we-realize-fantasies__button">Eclecticism</button></li>
                     </ul>
                 </div>
 
-                <img class="show-on-mobile" src="./img/fantasies-1-m.jpg" alt="">
-
-                <div class="realize-fantasies__slide-show hide-on-mobile">
+                <div class="we-realize-fantasies__slide-show">
                     <img src="./img/fantasies-1.jpg" alt="">
                     <img src="./img/fantasies-2.jpg" alt="">
                     <img src="./img/fantasies-3.jpg" alt="">
                     <img src="./img/fantasies-4.jpg" alt="">
                 </div>
+
+                <img class="we-realize-fantasies__slide-show-mobile" src="./img/fantasies-1-m.jpg" alt="">
             </div>
         </section>
 
@@ -338,7 +350,7 @@
             </p>
 
             <ul class="clients__list">
-                <li>
+                <li class="clients__card">
                     <h3 class="clients__name">
                         <img class="clients__avatar" src="./img/avatar_1.jpg" alt="">
                         Fedosova Maria Konstantinovna
@@ -363,7 +375,7 @@
                     </span>
                 </li>
 
-                <li>
+                <li class="clients__card">
                     <h3 class="clients__name">
                         <img class="clients__avatar" src="./img/avatar_2.jpg" alt="">
                         Afanasyev Sergey Alexandrovich
@@ -387,7 +399,7 @@
                         128 DAYS
                     </span>
                 </li>
-                <li>
+                <li class="clients__card">
                     <h3 class="clients__name">
                         <img class="clients__avatar" src="./img/avatar_3.jpg" alt="">
                         Kiriev Egor Leonidovich
@@ -433,14 +445,15 @@
                 <label class="check">
                     <input class="check__input" type="checkbox">
                     <span class="check__box"></span>
-                    <span class="check__text">I agree to the processing of personal data</span>
+                    <span class="check__text--white">I agree to the processing of personal data</span>
                 </label>
 
-                <button class="button clients__button">Submit</button>
+                <button class="clients__button">Submit</button>
             </form>
         </section>
 
         <section class="map">
+            <h2 class="visually-hidden">Map</h2>
             <address class="map__address">
                 Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29
             </address>
@@ -450,9 +463,9 @@
                 <a href="./blank.html"><img src="./img/icon/icon_instagram.svg" alt="instagram"></a>
             </div>
 
-            <img class="map__img hide-on-mobile" src="./img/map.jpg" width="925" height="466" alt="shopping center map">
-            <img class="map__img-m show-on-mobile" src="./img/map-m.jpg" width="340" height="255"
-                alt="shopping center map">
+            <img class="map__img" src="./img/map.jpg" width="925" height="466" alt="shopping center map">
+
+            <img class="map__img-mobile" src="./img/map-m.jpg" width="340" height="255" alt="shopping center map">
         </section>
     </main>
     <footer class="header">

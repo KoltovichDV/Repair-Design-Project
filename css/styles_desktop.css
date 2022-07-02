@@ -15,27 +15,6 @@
     overflow: hidden;
 }
 
-/* класс для скрытия на мобильнике */
-.hide-on-mobile {
-    display: inline;
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .hide-on-mobile {
-        display: none;
-    }
-}
-
-/* класс для показа только на мобильнике */
-.show-on-mobile {
-    display: none;
-}
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .show-on-mobile {
-        display: inline;
-    }
-}
 
 .body {
     margin: 0;
@@ -98,13 +77,13 @@
     color: #E3B873;
 }
 
-.button {
+.header__button {
     min-width: max-content;
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border-radius: 2px;
     border: 0;
-    outline: 0;
+
     cursor: pointer;
 
     font-size: 11px;
@@ -113,9 +92,6 @@
     text-transform: uppercase;
 
     color: #FFFFFF;
-}
-
-.header__button {
     width: 161px;
     height: 37px;
     font-style: italic;
@@ -187,23 +163,50 @@
 }
 
 .turnkey-repair__button1 {
-    margin-right: 18px;
+    min-width: max-content;
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
     width: 207px;
     height: 51px;
+    margin-right: 18px;
 }
 
 .turnkey-repair__button2 {
+    min-width: max-content;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
     width: 207px;
     height: 51px;
 
     background: none;
     border: 1px solid #FFFFFF;
-    border-radius: 2px;
 }
 
 
 /* sectoin-2 completed-projects */
 .completed-projects {
+    padding-top: 107px;
+    padding-bottom: 92px;
+
     background-color: #131313;
 
     font-family: 'Nunito Sans', sans-serif;
@@ -212,26 +215,30 @@
 }
 
 .completed-projects__container {
-    display: flex;
-    height: 1074px;
     max-width: 1171px;
     margin-right: auto;
     margin-left: auto;
 }
 
-.completed-projects__box1 {
-    padding-top: 177px;
+
+.completed-projects__box {
+    display: flex;
+    height: 482px;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.completed-projects__box2 {
-    padding-top: 107px;
-}
 
 .completed-projects__top-nav {
     display: flex;
+    width: fit-content;
+    padding-left: 0;
     gap: 60px;
     margin-top: 0;
-    margin-bottom: 53px;
+    margin-bottom: 45px;
+    margin-left: auto;
+    margin-right: 56px;
 }
 
 .completed-projects__button-top-nav {
@@ -283,7 +290,7 @@
     display: block;
     width: 442px;
     height: 86px;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
 
     font-size: 14px;
     line-height: 27px;
@@ -291,7 +298,12 @@
     color: #FFFFFF;
 }
 
-.completed-projects__dl {}
+.completed-projects__dl {
+    display: grid;
+    grid-template-columns: repeat(2, 190px);
+    row-gap: 34px;
+    margin-bottom: 64px;
+}
 
 .completed-projects__dt {
     font-family: 'Yeseva One';
@@ -300,13 +312,16 @@
     font-size: 18px;
     line-height: 25px;
     text-transform: uppercase;
+    margin-bottom: 9px;
 
     color: #E3B873;
 }
 
 .completed-projects__dd {
+    margin-left: 0;
     font-size: 13px;
     line-height: 21px;
+    max-width: 118px;
 
     color: #FFFFFF;
 }
@@ -323,9 +338,20 @@
 .completed-projects__slide {}
 
 
+.completed-projects__slide-mobile,
+.completed-projects__controls-mobile {
+    display: none;
+}
+
+.completed-projects__img-box {
+    margin-left: auto;
+}
+
 /* section-3 online-control */
 .online-control {
-    margin-top: -300px;
+    background: linear-gradient(to bottom,
+            #131313 43%, #FFFFFF 43%);
+    /* я не использую отрицательны марджен, как предлагалось в уроке, т.к. при переносе блока (по БЭМ) это будет проблемно. Поэтому вот такое решение с нулевым градиентом, которое считаю лучше. */
 
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
@@ -335,7 +361,7 @@
 .online-control__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     height: auto;
     max-width: 817px;
     margin-right: auto;
@@ -346,8 +372,12 @@
 .online-control__title {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    gap: 13px;
+
     width: 196px;
+    margin-top: 0;
+    margin-bottom: 31px;
 
     font-family: 'Yeseva One';
     font-style: normal;
@@ -365,25 +395,26 @@
 }
 
 .online-control__video-container {
-    
+    position: relative;
 }
 
-.online-control__video {
-   
-}
+.online-control__video {}
 
 .online-control__play-button {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0; 
+    top: calc(434px / 2 - 145px / 2);
+    left: calc(817px / 2 - 145px / 2);
 
+    width: 145px;
+    height: 145px;
 
     background: none;
     border: 0;
-    outline: 0;
     cursor: pointer;
+}
+
+.online-control__play-button-img {
+    display: block;
 }
 
 .online-control__text {
@@ -394,23 +425,79 @@
 .online-control__form {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 769px;
 }
 
-.online-control__lable {}
+.online-control__lable {
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
 
-.online-control__input {}
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
 
-.online-control__button {}
+    color: rgba(54, 54, 54, 0.5);
+}
+
+.online-control__input {
+    border: none;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+
+    padding-top: 7px;
+    padding-bottom: 6px;
+    margin: 0px 0px 39px ;
+
+
+
+}
+
+.online-control__input::placeholder {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #363636;
+}
+
+.online-control__button {
+    min-width: max-content;
+    background: #E3B873;
+    box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    width: 200px;
+    height: 51px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
 
 /* На счет чекбокса ниже: Я специально не использую для скрытия чекбокса display: none;, т.к. считаю это не правильно и вредной привычкой. Если скрывать через дисплей нан, его не будет видно скринридерам и без мышки на клавиатуре нельзя будет переходить на него. Хотя валидатор такой вариант пройдет, но просто не заметит косяк */
 /* Check */
 .check {
     display: block;
-    margin-left: 50%;
 }
 
 .check__input {
-    position: absolute width: 1px;
+    position: absolute;
+    width: 1px;
     height: 1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
@@ -418,7 +505,6 @@
 
 .check__box {
     position: absolute;
-    margin-left: -165px;
     width: 18px;
     height: 18px;
     /* размер 18px из макета. Взял от туда только саму галочку, а блок нарисовал css-ом */
@@ -438,7 +524,7 @@
 /* Focused */
 .check__input:focus+.check__box {
     box-shadow:
-        0 0 0 0.1em #131313;
+        0 0 0 0.1em #959595;
     /* цвет из макета, но дизайнер не прорисовал все состояния чекбокса. Поэтому додумываю сам */
 }
 
@@ -451,16 +537,55 @@
     background-color: #9B9B9B;
 }
 
-/* текст сопроваждающий чекбок. Смещение сделал, чтобы отцентровать */
+/* текст сопровождающий чекбок (чёрный) */
 .check__text {
-    margin-left: -140px;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 163.68%;
+
+    color: #181818;
+
+    margin-left: 26px;
+}
+
+/* текст c с модификатором сопровождающий чекбок (белый) */
+.check__text--white {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 163.68%;
+
+    color: #FFFFFF;
+
+    margin-left: 26px;
 }
 
 
-/* section-4 tape-of-repair */
-.tape-of-repair {}
+/* section-4 types-of-repair */
+.types-of-repair {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    max-width: 1236px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
 
-.tape-of-repair__title {
+.types-of-repair__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+
+    width: 196px;
+    margin-top: 148px;
+    margin-bottom: 31px;
+
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
@@ -472,7 +597,7 @@
     color: #181818;
 }
 
-.tape-of-repair__list {
+.types-of-repair__list {
     display: flex;
 
     height: auto;
@@ -482,13 +607,13 @@
     position: relative;
 }
 
-.tape-of-repair__option {
-display: flex;
-flex-direction: column;
-justify-content: center;
+.types-of-repair__option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.tape-of-repair__substrate {
+.types-of-repair__substrate {
     position: relative;
     z-index: 1;
     background-color: #FFFFFF;
@@ -497,9 +622,9 @@ justify-content: center;
     margin-top: -127px;
 }
 
-.tape-of-repair__img {}
+.types-of-repair__img {}
 
-.tape-of-repair__category {
+.types-of-repair__category {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
@@ -509,7 +634,7 @@ justify-content: center;
     color: #363636;
 }
 
-.tape-of-repair__description {
+.types-of-repair__description {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -519,7 +644,7 @@ justify-content: center;
     color: #959595;
 }
 
-.tape-of-repair__price {
+.types-of-repair__price {
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
@@ -533,7 +658,7 @@ justify-content: center;
     color: #FFFFFF;
 }
 
-.tape-of-repair__freeze-request {
+.types-of-repair__freeze-request {
     display: flex;
 
     height: auto;
@@ -543,7 +668,7 @@ justify-content: center;
     position: relative;
 }
 
-.tape-of-repair__freeze {
+.types-of-repair__freeze {
     list-style-type: none;
 
     display: flex;
@@ -554,18 +679,19 @@ justify-content: center;
     height: 645px;
 }
 
-.tape-of-repair__form {
+.types-of-repair__wrapping-form {
     display: flex;
     flex-direction: column;
+
+    align-items: center;
     width: 509px;
     height: 506px;
 
     background: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
-
 }
 
-.tape-of-repair__text-form {
+.types-of-repair__title-form {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -576,9 +702,78 @@ justify-content: center;
     color: #FFFFFF;
 }
 
-.tape-of-repair__button {}
+.types-of-repair__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.tape-of-repair__discount {
+    width: 408px;
+    height: 244px;
+}
+
+.types-of-repair__label {
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+.types-of-repair__input {
+    width: 408px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 7px;
+    padding-bottom: 10px;
+
+
+
+}
+
+.types-of-repair__input::placeholder {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #FFFFFF;
+}
+
+.types-of-repair__button {
+    min-width: max-content;
+    background: #E3B873;
+    box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    width: 213px;
+    height: 51px;
+    padding: 0;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+.types-of-repair__discount {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -596,8 +791,8 @@ justify-content: center;
 
 
 
-/* section-5 realize-fantasies */
-.realize-fantasies {
+/* section-5 we-realize-fantasies */
+.we-realize-fantasies {
     background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
 
     height: 864px;
@@ -611,7 +806,7 @@ justify-content: center;
     line-height: 38px;
 }
 
-.realize-fantasies__container {
+.we-realize-fantasies__container {
     height: auto;
     max-width: 1171px;
     margin-right: auto;
@@ -621,7 +816,7 @@ justify-content: center;
     display: flex;
 }
 
-.realize-fantasies__box-links {
+.we-realize-fantasies__box-links {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -629,7 +824,7 @@ justify-content: center;
 
 }
 
-.realize-fantasies__title {
+.we-realize-fantasies__title {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
@@ -641,25 +836,24 @@ justify-content: center;
 
 }
 
-.realize-fantasies__list {
+.we-realize-fantasies__list {
     list-style-type: none;
     padding: 0;
 }
 
 
-.realize-fantasies__button {
+.we-realize-fantasies__button {
     background: none;
     border: 0;
-    outline: 0;
     cursor: pointer;
+    padding: 13px 0px;
 
     color: #FFFFFF;
 }
 
-.realize-fantasies__button--active {
+.we-realize-fantasies__button--active {
     background: none;
     border: 0;
-    outline: 0;
     cursor: pointer;
     border-bottom: 1px solid #E3B873;
     padding: 0;
@@ -667,11 +861,22 @@ justify-content: center;
     color: #E3B873;
 }
 
-.realize-fantasies__slide-show {}
+.we-realize-fantasies__slide-show {}
+
+
+.we-realize-fantasies__slide-show-mobile {
+    display: none;
+}
 
 
 /* section-6 clients */
-.clients {}
+.clients {
+    height: auto;
+    max-width: 1236px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
 
 .clients__title {
     font-family: 'Yeseva One';
@@ -698,9 +903,23 @@ justify-content: center;
 
 .clients__list {
     display: flex;
+    justify-content: space-between;
+    gap: 54px;
+
+}
+
+.clients__card {
+    display: flex;
+    flex-direction: column;
+    width: 376px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
 }
 
 .clients__name {
+    display: flex;
+
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
@@ -713,6 +932,8 @@ justify-content: center;
 .clients__avatar {}
 
 .clients__review {
+    margin: auto;
+
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -774,6 +995,30 @@ justify-content: center;
     color: #FFFFFF;
 }
 
+.clients__button {
+    min-width: max-content;
+    background: #E3B873;
+    box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+
+    width: 200px;
+    height: 51px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 27px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+
 /* section-7 map */
 .map {}
 
@@ -794,9 +1039,9 @@ justify-content: center;
 }
 
 .map__icons {
-display: flex;
-justify-content: center;
-width: 71px;
+    display: flex;
+    justify-content: center;
+    width: 71px;
 }
 
 .map__img {
@@ -804,4 +1049,42 @@ width: 71px;
     margin: auto;
 }
 
-.map__img-m {}
+.map__img-mobile {
+    display: none;
+}
+
+
+@media (max-width: 1439px) {
+
+    /* объекты, которые скрываются в мобильной версии */
+    .header__button,
+    .header__navigation,
+    .completed-projects__top-nav,
+    .completed-projects__nav,
+    .completed-projects__slide,
+    .we-realize-fantasies__list,
+    .we-realize-fantasies__slide-show,
+    .clients__title,
+    .clients__text,
+    .clients__list,
+    .map__img {
+        display: none;
+    }
+
+    /* объекты, которые показываются только в мобильной версии */
+    .completed-projects__slide-mobile {
+        display: block;
+    }
+
+    .we-realize-fantasies__slide-show-mobile {
+        display: block;
+    }
+
+    .completed-projects__controls-mobile {
+        display: block;
+    }
+
+    .map__img-mobile {
+        display: block;
+    }
+}
