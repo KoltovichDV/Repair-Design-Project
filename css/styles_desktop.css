@@ -449,7 +449,7 @@
 
     padding-top: 7px;
     padding-bottom: 6px;
-    margin: 0px 0px 39px ;
+    margin: 0px 0px 39px;
 
 
 
@@ -599,18 +599,19 @@
 
 .types-of-repair__list {
     display: flex;
+    gap: 30px;
 
+    padding-left: 0;
     height: auto;
     max-width: 1236px;
     margin-right: auto;
     margin-left: auto;
-    position: relative;
 }
 
 .types-of-repair__option {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .types-of-repair__substrate {
@@ -619,12 +620,19 @@
     background-color: #FFFFFF;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
     width: 330px;
+    min-height: 286px;
     margin-top: -127px;
+    padding-left: 34px;
+    padding-top: 25px;
+    padding-bottom: 1px;
 }
 
 .types-of-repair__img {}
 
 .types-of-repair__category {
+    margin-top: 0;
+    margin-bottom: 13px;
+
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
@@ -635,16 +643,44 @@
 }
 
 .types-of-repair__description {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 49px;
+
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 27px;
-
     color: #959595;
 }
 
+.types-of-repair__description li {
+    position: relative;
+    padding-left: 9px;
+}
+
+.types-of-repair__description li::before {
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    content: "";
+    background-color: #959595;
+    top: calc(50% - 3px);
+    left: 0;
+}
+
 .types-of-repair__price {
+    display: block;
+    position: relative;
+    padding: 17px 22px;
+    width: fit-content;
+    margin-top: -30px;
+    z-index: 1;
+
     background: #E3B873;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
@@ -660,38 +696,64 @@
 
 .types-of-repair__freeze-request {
     display: flex;
+    justify-content: space-between;
+    position: relative;
+
 
     height: auto;
-    max-width: 1236px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
-    position: relative;
+    margin-top: 124px;
+    padding-left: 200px;
+    background-image: url(../img/bg_house.jpg);
+    background-repeat: no-repeat;
+
 }
 
 .types-of-repair__freeze {
     list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: stretch;
-    background-image: url(../img/bg_house.jpg);
+    gap: 80px;
     height: 645px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #363636;
+}
+
+.types-of-repair__freeze li {
+    display: flex;
+    align-items: center;
+    max-width: 410px;
 }
 
 .types-of-repair__wrapping-form {
     display: flex;
     flex-direction: column;
 
-    align-items: center;
-    width: 509px;
-    height: 506px;
+    width: 506px;
+height: fit-content;
+    padding: 27px 49px;
 
     background: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 }
 
 .types-of-repair__title-form {
+    margin-top: 0;
+    margin-bottom: 39px;
+    
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -706,16 +768,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     width: 408px;
-    height: 244px;
+
+}
+
+.types-of-repair__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+    border: none;
+    padding: 0;
+    margin-bottom: 16px;
 }
 
 .types-of-repair__label {
     display: flex;
     flex-direction: column;
-    padding-top: 48px;
 
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -727,6 +796,7 @@
 
 }
 
+
 .types-of-repair__input {
     width: 408px;
     border: none;
@@ -734,9 +804,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 7px;
     padding-bottom: 10px;
-
-
-
 }
 
 .types-of-repair__input::placeholder {
@@ -749,6 +816,10 @@
     color: #FFFFFF;
 }
 
+.types-of-repair__check {
+    margin-bottom: 39px;
+}
+
 .types-of-repair__button {
     min-width: max-content;
     background: #E3B873;
@@ -756,6 +827,7 @@
     border-radius: 2px;
     border: 0;
     cursor: pointer;
+    align-self:flex-end;
 
     width: 213px;
     height: 51px;
@@ -1041,6 +1113,7 @@
 .map__icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 71px;
 }
 
