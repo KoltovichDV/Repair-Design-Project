@@ -695,20 +695,28 @@
 }
 
 .types-of-repair__freeze-request {
+    width: 100%;
+    padding-bottom: 242px; 
+}
+
+.types-of-repair__wrapper {
+    background-image: url(../img/bg_house.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    padding-top: 200px;
+    padding-bottom: 30px;
+}
+
+.types-of-repair__container {
     display: flex;
     justify-content: space-between;
     position: relative;
+    width: 1236px;
 
-
-    height: auto;
-    width: 100%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 124px;
-    padding-left: 200px;
-    background-image: url(../img/bg_house.jpg);
-    background-repeat: no-repeat;
-
+    padding-left: 130px;
 }
 
 .types-of-repair__freeze {
@@ -720,8 +728,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 80px;
-    height: 645px;
+    gap: 60px;
 
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -743,7 +750,7 @@
     flex-direction: column;
 
     width: 506px;
-height: fit-content;
+    height: fit-content;
     padding: 27px 49px;
 
     background: #131313;
@@ -753,7 +760,7 @@ height: fit-content;
 .types-of-repair__title-form {
     margin-top: 0;
     margin-bottom: 39px;
-    
+
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -827,7 +834,7 @@ height: fit-content;
     border-radius: 2px;
     border: 0;
     cursor: pointer;
-    align-self:flex-end;
+    align-self: flex-end;
 
     width: 213px;
     height: 51px;
@@ -843,6 +850,13 @@ height: fit-content;
     text-transform: uppercase;
 
     color: #FFFFFF;
+}
+
+.types-of-repair__discount-container {
+    width: 1236px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 165px;
 }
 
 .types-of-repair__discount {
@@ -906,6 +920,9 @@ height: fit-content;
 
     color: #E3B873;
 
+    margin-top: 0;
+    padding-top: 138px;
+
 }
 
 .we-realize-fantasies__list {
@@ -933,8 +950,24 @@ height: fit-content;
     color: #E3B873;
 }
 
-.we-realize-fantasies__slide-show {}
+.we-realize-fantasies__slide-show {
+    display: flex;
+    gap: 43px;
+    margin-top: -113px;
+}
 
+.we-realize-fantasies__slide-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 72px;
+}
+
+.we-realize-fantasies__slide-right {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
 .we-realize-fantasies__slide-show-mobile {
     display: none;
