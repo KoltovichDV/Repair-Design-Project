@@ -694,12 +694,14 @@
     color: #FFFFFF;
 }
 
-.types-of-repair__freeze-request {
+
+/* section-5 deal-steps */
+.deal-steps {
     width: 100%;
-    padding-bottom: 242px; 
+    padding-bottom: 242px;
 }
 
-.types-of-repair__wrapper {
+.deal-steps__wrapper {
     background-image: url(../img/bg_house.jpg);
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -708,7 +710,7 @@
     padding-bottom: 30px;
 }
 
-.types-of-repair__container {
+.deal-steps__container {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -719,7 +721,7 @@
     padding-left: 130px;
 }
 
-.types-of-repair__freeze {
+.deal-steps__freeze {
     list-style-type: none;
     padding-left: 0;
     margin-top: 0;
@@ -739,13 +741,13 @@
     color: #363636;
 }
 
-.types-of-repair__freeze li {
+.deal-steps__freeze li {
     display: flex;
     align-items: center;
     max-width: 410px;
 }
 
-.types-of-repair__wrapping-form {
+.deal-steps__wrapping-form {
     display: flex;
     flex-direction: column;
 
@@ -757,7 +759,7 @@
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
 }
 
-.types-of-repair__title-form {
+.deal-steps__title-form {
     margin-top: 0;
     margin-bottom: 39px;
 
@@ -771,7 +773,7 @@
     color: #FFFFFF;
 }
 
-.types-of-repair__form {
+.deal-steps__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -780,7 +782,7 @@
 
 }
 
-.types-of-repair__fieldset {
+.deal-steps__fieldset {
     display: flex;
     flex-direction: column;
     gap: 51px;
@@ -789,7 +791,7 @@
     margin-bottom: 16px;
 }
 
-.types-of-repair__label {
+.deal-steps__label {
     display: flex;
     flex-direction: column;
 
@@ -804,7 +806,7 @@
 }
 
 
-.types-of-repair__input {
+.deal-steps__input {
     width: 408px;
     border: none;
     background: transparent;
@@ -813,7 +815,7 @@
     padding-bottom: 10px;
 }
 
-.types-of-repair__input::placeholder {
+.deal-steps__input::placeholder {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -823,11 +825,11 @@
     color: #FFFFFF;
 }
 
-.types-of-repair__check {
+.deal-steps__check {
     margin-bottom: 39px;
 }
 
-.types-of-repair__button {
+.deal-steps__button {
     min-width: max-content;
     background: #E3B873;
     box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
@@ -852,14 +854,14 @@
     color: #FFFFFF;
 }
 
-.types-of-repair__discount-container {
+.deal-steps__discount-container {
     width: 1236px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 165px;
 }
 
-.types-of-repair__discount {
+.deal-steps__discount {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -877,7 +879,7 @@
 
 
 
-/* section-5 we-realize-fantasies */
+/* section-6 we-realize-fantasies */
 .we-realize-fantasies {
     background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
 
@@ -974,16 +976,31 @@
 }
 
 
-/* section-6 clients */
+/* section-7 clients */
 .clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: auto;
-    max-width: 1236px;
     margin-right: auto;
     margin-left: auto;
     position: relative;
+
+    background-image: url(../img/bg_city.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 .clients__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+
+    width: 196px;
+    margin-top: 110px;
+    margin-bottom: 24px;
+
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
@@ -996,12 +1013,17 @@
 }
 
 .clients__text {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 39px;
+
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 29px;
     text-align: center;
+    width: 423px;
 
     color: #363636;
 }
@@ -1010,10 +1032,20 @@
     display: flex;
     justify-content: space-between;
     gap: 54px;
+    max-width: 1236px;
 
+    padding-left: 0;
+    margin-top: 0;
 }
 
 .clients__card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 355px;
+
+}
+
+.clients__card-warp {
     display: flex;
     flex-direction: column;
     width: 376px;
@@ -1024,37 +1056,61 @@
 
 .clients__name {
     display: flex;
+    align-items: center;
+    margin: 0;
 
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
+    width: 276px;
 
     color: #181818;
 }
 
-.clients__avatar {}
+.clients__avatar {
+    margin: 24px 20px;
+}
 
 .clients__review {
-    margin: auto;
+    display: block;
+    margin: 0;
+    padding-bottom: 90px;
+    padding-left: 20px;
+    padding-right: 31px;
 
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 180%;
-    /* or 23px */
-
 
     color: #959595;
 }
 
+.clients__object-of-work {
+    display: flex;
+
+    width: 294px;
+    height: 54px;
+    margin-top: -27px;
+}
+
 .clients__dimensions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    width: fit-content;
+
+    padding: 17px;
+
+    border-right: 0.75px solid #FFFFFF;
+
     background-color: #E3B873;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
-    border: 0.75px solid #FFFFFF;
-
 
     font-family: 'Yeseva One';
     font-style: normal;
@@ -1066,6 +1122,13 @@
 }
 
 .clients__term {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+
+    padding: 17px 15px 17px 17px;
+
     background: #E3B873;
     box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
 
@@ -1074,15 +1137,18 @@
     font-weight: 400;
     font-size: 17px;
     line-height: 24px;
-
+    text-transform: uppercase;
     color: #FFFFFF;
 }
 
 .clients__form {
     display: flex;
     flex-direction: column;
-    width: 509px;
-    height: 506px;
+    position: absolute;
+    width: 883px;
+    height: 445px;
+
+    margin-top: 885px;
 
     background: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
@@ -1124,13 +1190,25 @@
 }
 
 
-/* section-7 map */
-.map {}
+/* section-8 map */
+.map {
+    /* width: 955px; */
+    background-color: #181818;
+
+    background-image: url(../img/bg_for_map-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center ; */
+}
 
 .map__address {
     display: block;
     width: 589px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 26px;
+    padding-top: 275px;
 
     font-family: 'Yeseva One';
     font-style: normal;
@@ -1147,12 +1225,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 71px;
+    gap: 15px;
+    margin-bottom: 43px;
+}
+
+.map__warp {
+    display: block;
+    margin: auto;
+    width: 925px;
 }
 
 .map__img {
-    display: block;
-    margin: auto;
+    margin-bottom: 66px;
 }
 
 .map__img-mobile {
