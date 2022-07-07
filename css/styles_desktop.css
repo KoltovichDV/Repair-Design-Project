@@ -164,6 +164,10 @@
     color: #FFFFFF;
 }
 
+.turnkey-repair__br-mobile {
+    display: none;
+}
+
 .turnkey-repair__button1 {
     min-width: max-content;
     background: #E3B873;
@@ -337,10 +341,11 @@
     border: 0;
 }
 
-.completed-projects__slide {}
+.completed-projects__slide {
+    width: 679px;
+    height: 482px;
+}
 
-
-.completed-projects__slide-mobile,
 .completed-projects__controls-mobile {
     display: none;
 }
@@ -1002,6 +1007,9 @@
     display: none;
 }
 
+.we-realize-fantasies__controls-mobile {
+    display: none;
+}
 
 /* section-7 clients */
 .clients {
@@ -1310,6 +1318,8 @@
     background-color: #181818;
 
     background-image: url(../img/bg_for_map-dark.jpg);
+    /* в этом блоке специально подставил фоном готовую картинку уже затемнённую (экспортнул несколько слоёв в один из Фигмы), т.к. считаю, в реальном проекте всё должно соответствовать дизайн-макету и процент затемнения в том числе. Тут диктует тонкости дизайнер, а не на угад (примерно) должен делать верстальщик... Понятно, что ситуации в жизни разные, но как минимум я бы всё обсудил с дизайнером. Сделал это не для облегчения своей задачи в вёрстке. Я умею делать наложение слоя затемнения. С наложением сделал фон  первой секции turnkey-repair, а эту так. Решил показать два варианта. */
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1335,12 +1345,20 @@
     color: #E3B873;
 }
 
+.map__br-mobile {
+    display: none;
+}
+
 .map__icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
     margin-bottom: 43px;
+}
+
+.map__icon {
+    width: 28px;
 }
 
 .map__warp {
@@ -1444,7 +1462,6 @@
     .header__navigation,
     .completed-projects__top-nav,
     .completed-projects__nav,
-    .completed-projects__slide,
     .we-realize-fantasies__list,
     .we-realize-fantasies__slide-show,
     .clients__title,
@@ -1456,28 +1473,379 @@
         display: none;
     }
 
-    /* объекты, которые показываются только в мобильной версии */
-    .completed-projects__slide-mobile {
-        display: block;
+
+    /* объекты, которые показываются только в мобильной версии и другие корректировки в мобилке */
+    .header__container {
+        max-width: 339px;
     }
 
-    .we-realize-fantasies__slide-show-mobile {
-        display: block;
+    .header__logo {
+        margin-right: auto;
+    }
+
+    .header__telephone {
+        color: #FFFFFF;
+    }
+
+
+    /* turnkey-repair */
+    .turnkey-repair {
+        height: 476px;
+        width: 375px;
+        background-image: url(../img/bg_big-m.jpg);
+    }
+
+    .turnkey-repair__container {
+        max-width: 339px;
+    }
+
+    .turnkey-repair__title {
+        width: 339px;
+        padding-top: 85px;
+
+        font-size: 23px;
+        line-height: 132.83%;
+    }
+
+    .turnkey-repair__text {
+        max-width: 339px;
+        margin-bottom: 32px;
+
+        font-size: 14px;
+        line-height: 135.84%;
+    }
+
+    .turnkey-repair__button1 {
+        width: 339px;
+        height: 51px;
+        margin-bottom: 26px;
+    }
+
+    .turnkey-repair__br-mobile {
+        display: inline;
+    }
+
+    .turnkey-repair__button2 {
+        width: 339px;
+        height: 51px;
+    }
+
+    .turnkey-repair__img-overlay {
+        height: 478px;
+        margin-top: 60px;
+    }
+
+
+    /* completed-projects */
+    .completed-projects__container {
+        max-width: 339px;
+    }
+
+    .completed-projects__box {
+        width: 339px;
+
+    }
+
+    .completed-projects__title {
+        margin-left: auto;
+        margin-right: auto;
+        width: 253px;
+
+        font-size: 22px;
+        line-height: 138.6%;
+        text-align: center;
+    }
+
+    .completed-projects__text {
+        width: 311px;
+
+        font-size: 11px;
+        line-height: 158.48%;
+
+        text-align: center;
+
+    }
+
+    .completed-projects__slide {
+        width: 340px;
+        height: 242px;
     }
 
     .completed-projects__controls-mobile {
         display: block;
     }
 
-    .map__img-mobile {
-        display: block;
+    .completed-projects__button-mobile {
+        background: none;
+        border: 0px;
+        cursor: pointer;
+    }
+
+
+    /* online-control */
+    .online-control {
+        background: linear-gradient(to bottom, #131313 90%, #FFFFFF 90%);
+    }
+
+    .online-control__container {
+        max-width: 340px;
+    }
+
+    .online-control__title {
+        font-size: 22px;
+        line-height: 138.6%;
+    }
+
+    .online-control__video-container {
+        width: 340px;
+        height: 207px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .online-control__video {
+        width: 340px;
+        height: 207px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .online-control__play-button {
+        top: calc(207px / 2 - 145px / 2);
+        left: calc(340px / 2 - 65px / 2);
+    }
+
+    .online-control__play-button-img {
+        width: 65px;
+    }
+
+    .online-control__video-container::after {
+        margin-top: 8px;
+    }
+
+    .online-control__text {
+        width: 340px;
+        margin-top: 35px;
+
+        font-size: 11px;
+        line-height: 169.8%;
+        color: #FFFFFF;
+    }
+
+    .online-control__form {
+        flex-direction: column;
+        gap: 1px;
+        width: 340px;
+    }
+
+    .online-control__lable {
+        padding-top: 63px;
+
+        font-size: 13px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .online-control__input {
+        width: 340px;
+        padding-top: 7px;
+        padding-bottom: 6px;
+        margin: 10px;
+
+        background: transparent;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .online-control__input::placeholder {
+        font-size: 14px;
+        line-height: 138.72%;
+
+        color: #FFFFFF;
+    }
+
+
+    /* types-of-repair */
+    .types-of-repair {
+        max-width: 340px;
+    }
+
+    .types-of-repair__title {
+        margin-top: 83px;
+
+        font-size: 22px;
+        line-height: 138.6%;
     }
 
     .types-of-repair__list {
         flex-direction: column;
+        gap: 59px;
     }
 
     .types-of-repair__option {
-        align-items:flex-start;
+        align-items: flex-start;
+    }
+
+    .types-of-repair__img {
+        width: 340px;
+        height: 365px;
+    }
+
+    .types-of-repair__substrate {
+        width: 270px;
+        min-height: 241px;
+    }
+
+    .types-of-repair__category {
+        font-size: 15px;
+        line-height: 138.6%;
+    }
+
+    .types-of-repair__description {
+        font-size: 13px;
+        line-height: 169.8%;
+    }
+
+    .types-of-repair__price {
+        padding: 12px 16px;
+
+        font-size: 15px;
+        line-height: 138.6%;
+    }
+
+
+    /* we-realize-fantasies */
+    .we-realize-fantasies {
+        height: auto;
+
+        background: linear-gradient(to top, #131313 50%, #FFFFFF 50%);
+        background-image: url();
+    }
+
+    .we-realize-fantasies__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .we-realize-fantasies__box-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .we-realize-fantasies__title {
+        padding-top: 45px;
+        margin-bottom: 24px;
+
+        font-size: 22px;
+        line-height: 138.6%;
+
+        text-align: center;
+    }
+
+    .we-realize-fantasies__slide-show-mobile {
+        display: block;
+    }
+
+    .we-realize-fantasies__controls-mobile {
+        display: block;
+    }
+
+    .we-realize-fantasies__button-mobile {
+        background: none;
+        border: 0px;
+        cursor: pointer;
+
+    }
+
+    /* clients */
+    .clients {
+        background-color: #131313;
+    }
+
+    .clients__wrapping-form {
+        position: static;
+        top: auto;
+        width: auto;
+    }
+
+    .clients__title-form {
+        margin-top: 52px;
+    }
+
+    .clients__form {
+        width: 340px;
+    }
+
+    .clients__fieldset {
+        margin-bottom: 0;
+        width: 340px;
+        height: auto;
+    }
+
+    .clients__form-div {
+        flex-direction: column;
+        width: 340px;
+    }
+
+    .clients__label {
+        width: 340px;
+
+    }
+
+    .clients__input {
+        width: 340px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .clients__input--question {
+        width: 340px;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .clients__check {
+        margin-top: 23px;
+        margin-bottom: 63px;
+        margin-left: 0;
+    }
+
+    .clients__button {
+        margin-bottom: 46px;
+        width: 340px;
+    }
+
+
+    /* map */
+    .map {
+        background-image: url();
+        background-color: #131313;
+        margin: 0;
+        height: auto;
+        padding-bottom: 49px;
+    }
+
+    .map__img-mobile {
+        display: block;
+        margin: auto;
+    }
+
+    .map__address {
+        padding-top: 42px;
+        width: 312px;
+        margin-bottom: 24px;
+
+        font-size: 18px;
+        line-height: 138.6%;
+    }
+
+    .map__br-mobile {
+        display: inline-block;
+    }
+
+    .map__icons {
+        margin-bottom: 0;
+        gap: 21px;
+    }
+
+    .map__icon {
+        width: 39px;
     }
 }

@@ -45,10 +45,13 @@
                     <span class="turnkey-repair__title--city">Rostov-on-Don</span>
                 </h1>
                 <p class="turnkey-repair__text">
-                    Get ready-made turnkey repairs on time<br> with work time saving up to 45 days and 20% from cost of
+                    Get ready-made turnkey repairs on time<br> with work time saving up to 45 days and <br
+                        class="turnkey-repair__br-mobile">20% from cost of
                     materials
                     due to the organization of work
                 </p>
+                <!-- в мобильном макете форматирование этого блока текста, конечно жесть... Я бы побил дизайнера :-). Сделал его крайне спорную задумку по форматированию текста добавив br-ку с классом, которая скрывается в десктопной версии и отображатеся только в мобильной -->
+
                 <button class="button turnkey-repair__button1">CALCULATE THE COST</button>
                 <button class="button turnkey-repair__button2">SUBMIT YOUR APPLICATION</button>
             </div>
@@ -67,6 +70,7 @@
                     <li>
                         <button class="completed-projects__button-top-nav">Rostov-on-Don Patriotic</button>
                     </li>
+                    <!-- сделал выше именно кнопками, а не ссылками, т.к. эти три пункта больше напоминают дублирование навигации стрелками из этого раздела, которые совершают замену слайдов и поисаний проектов, а не ссылку на другие страницы. -->
                 </ul>
                 <div class="completed-projects__box">
                     <h2 class="completed-projects__title">
@@ -104,39 +108,45 @@
 
                     <div class="completed-projects__nav">
                         <button class="completed-projects__button-nav" aria-label="back">
-                            <img src="./img/icon/icon_arrow-left.svg" alt="">
+                            <img src="./img/icon/icon_arrow-left.svg" alt="icon arrow left to back project">
                         </button>
 
                         <button class="completed-projects__button-nav" aria-label="selected slide">
-                            <img src="./img/icon/icon_point_active.svg" alt="">
+                            <img src="./img/icon/icon_point_active.svg" alt="icon active project">
                         </button>
 
                         <button class="completed-projects__button-nav" aria-label="next slide">
-                            <img src="./img/icon/icon_point_no-active.svg" alt="">
+                            <img src="./img/icon/icon_point_no-active.svg" alt="icon no active project go next">
                         </button>
 
                         <button class="completed-projects__button-nav" aria-label="next slide">
-                            <img src="./img/icon/icon_point_no-active.svg" alt="">
+                            <img src="./img/icon/icon_point_no-active.svg" alt="icon no active project go next">
                         </button>
 
                         <button class="completed-projects__button-nav" aria-label="forward">
-                            <img src="./img/icon/icon_arrow-right.svg" alt="">
+                            <img src="./img/icon/icon_arrow-right.svg" alt="icon arrow right to next project">
                         </button>
                     </div>
+                    <!-- навигацию с кнопками сопроводил описанием, если картинки не подгрузятся или для озвучивания скринридером -->
 
                     <div class="completed-projects__img-box">
-                        <img class="completed-projects__slide" src="./img/slide1.jpg" width="679" height="482" alt="">
-                        <img class="completed-projects__slide-mobile" src="./img/slide2-m.jpg" alt="">
+                        <picture class="completed-projects__slide">
+                            <source srcset="./img/slide2-m.jpg" media="(max-width: 1299px)">
+                            <img src="./img/slide1.jpg" 
+                                alt="interior at the window of the Аdmiral project">
+                        </picture>
+                        <!-- подмена картинки для мобильной версии. Странно, что они разные у дизайнера в макете. Обратил внимание, что в слоях десктопной версии есть таже, что в мобильной версии, но скрыта верхним слоем. Использую в проекте 2 варината (через тег picture и в css @media скрываю display: none и подменяю) -->
 
-                        <div class="completed-projects__controls-mobile">
-                            <button aria-label="back">
-                                <img src="./img/icon/icon_round_arrow-left.svg" alt="">
-                            </button>
-                            <button aria-label="forward">
-                                <img src="./img/icon/icon_round_arrow-right.svg" alt="">
-                            </button>
-                        </div>
                     </div>
+                </div>
+                <div class="completed-projects__controls-mobile">
+                    <button class="completed-projects__button-mobile" aria-label="back">
+                        <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
+                    </button>
+                    <button class="completed-projects__button-mobile" aria-label="forward">
+                        <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
+                    </button>
+                    <!-- кнопки смены проектов и слайдов для мобильной версии сопроводил поясняющим описанием, если картинки заглючат и не загрузятся -->
                 </div>
             </div>
         </section>
@@ -193,7 +203,10 @@
 
             <ul class="types-of-repair__list">
                 <li class="types-of-repair__option">
-                    <img class="types-of-repair__img" src="./img/type_repair-1.jpg" alt="">
+                    <picture class="types-of-repair__img">
+                        <source srcset="./img/type_repair-1-m.jpg" media="(max-width: 1299px)">
+                        <img src="./img/type_repair-1.jpg" alt="Interior Redecorating">
+                    </picture>
                     <div>
                         <div class="types-of-repair__substrate">
                             <h3 class="types-of-repair__category">Redecorating</h3>
@@ -214,7 +227,10 @@
                 </li>
 
                 <li class="types-of-repair__option">
-                    <img class="types-of-repair__img" src="./img/type_repair-2.jpg" alt="">
+                    <picture class="types-of-repair__img">
+                        <source srcset="./img/type_repair-2-m.jpg" media="(max-width: 1299px)">
+                        <img src="./img/type_repair-2.jpg" alt="Interior Overhaul">
+                    </picture>
                     <div>
                         <div class="types-of-repair__substrate">
                             <h3 class="types-of-repair__category">Overhaul</h3>
@@ -235,7 +251,10 @@
                 </li>
 
                 <li class="types-of-repair__option">
-                    <img class="types-of-repair__img" src="./img/type_repair-3.jpg" alt="">
+                    <picture class="types-of-repair__img">
+                        <source srcset="./img/type_repair-3-m.jpg" media="(max-width: 1299px)">
+                        <img src="./img/type_repair-3.jpg" alt="Interior Designer Repair">
+                    </picture>
                     <div>
                         <div class="types-of-repair__substrate">
                             <h3 class="types-of-repair__category">Designer Repair</h3>
@@ -355,8 +374,16 @@
                     </div>
                 </div>
 
-                <img class="we-realize-fantasies__slide-show-mobile" src="./img/fantasies-1-m.jpg" alt="">
-            </div>
+                
+                <div class="we-realize-fantasies__controls-mobile">
+                    <img class="we-realize-fantasies__slide-show-mobile" src="./img/fantasies-1-m.jpg" alt="">
+                    <button class="we-realize-fantasies__button-mobile" aria-label="back">
+                        <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
+                    </button>
+                    <button class="we-realize-fantasies__button-mobile aria-label="forward">
+                        <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
+                    </button>
+                </div>
         </section>
 
         <section class="clients">
@@ -495,16 +522,13 @@
             <div class="map__container">
 
                 <img class="map__img-mobile" src="./img/map-m.jpg" width="340" height="255" alt="shopping center map">
-
                 <address class="map__address">
-                    Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29
+                    Rostov-on-Don, Nansen St., 239 Shopping Center Decorum <br class="map__br-mobile">Tel +7 (928) 768 32 29
                 </address>
 
                 <div class="map__icons">
-                    <a href="./blank.html"><img src="./img/icon/icon_e-mail.svg" width="28" height="29"
-                            alt="e-mail"></a>
-                    <a href="./blank.html"><img src="./img/icon/icon_instagram.svg" width="28" height="29"
-                            alt="instagram"></a>
+                    <a href="./blank.html"><img class="map__icon" src="./img/icon/icon_e-mail.svg" alt="e-mail"></a>
+                    <a href="./blank.html"><img class="map__icon" src="./img/icon/icon_instagram.svg" alt="instagram"></a>
                 </div>
 
                 <div class="map__warp">
