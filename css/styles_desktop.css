@@ -30,6 +30,9 @@
 }
 
 .header__container {
+    display: flex;
+    align-items: center;
+
     max-width: 1256px;
     margin-right: auto;
     margin-left: auto;
@@ -37,21 +40,18 @@
     margin-bottom: 0;
     padding-top: 24px;
     padding-bottom: 22px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 95px 68px 45px;
 }
 
 .header__logo {
-    margin-right: 95px;
+    margin-left: 0;
+    margin-right: 122px;
+    padding: 0;
 }
 
 .header__navigation {
     display: flex;
-    align-items: center;
     gap: 47px;
+    margin-right: 96px;
 
     text-transform: uppercase;
 }
@@ -71,6 +71,7 @@
 .header__telephone {
     display: block;
     min-width: max-content;
+    margin: 0 45px 0 0;
 
     font-size: 11px;
     line-height: 15px;
@@ -80,6 +81,9 @@
 }
 
 .header__button {
+    margin: 0;
+    padding: 13px 39px;
+
     min-width: max-content;
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
@@ -92,16 +96,15 @@
     line-height: 15px;
     text-align: center;
     text-transform: uppercase;
-
-    color: #FFFFFF;
-    width: 161px;
-    height: 37px;
     font-style: italic;
+    color: #FFFFFF;
+
 }
 
 
 /* section-1 turnkey-repair */
 .turnkey-repair {
+    position: relative;
     background-color: #131313;
     height: 707px;
     background-image: url(../img/bg_big.jpg);
@@ -121,25 +124,24 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.7);
     height: 707px;
-    margin-top: 83px;
 }
 
 .turnkey-repair__container {
-    height: auto;
     max-width: 1171px;
     margin-right: auto;
     margin-left: auto;
+    padding-top: 194px;
     position: relative;
     z-index: 1;
 }
 
 .turnkey-repair__title {
     margin: 0;
+    margin-bottom: 19px;
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     font-style: normal;
     font-weight: 400;
-    padding-top: 194px;
     width: 600px;
 
     font-size: 40px;
@@ -155,8 +157,8 @@
 .turnkey-repair__text {
     display: block;
     width: 510px;
-    height: 89px;
-    margin-bottom: 45px;
+    margin-top: 0;
+    margin-bottom: 41px;
 
     font-size: 22px;
     line-height: 36px;
@@ -169,6 +171,10 @@
 }
 
 .turnkey-repair__button1 {
+    width: 207px;
+    height: 51px;
+    margin-right: 18px;
+
     min-width: max-content;
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
@@ -182,9 +188,6 @@
     text-transform: uppercase;
 
     color: #FFFFFF;
-    width: 207px;
-    height: 51px;
-    margin-right: 18px;
 }
 
 .turnkey-repair__button2 {
@@ -229,7 +232,7 @@
 
 .completed-projects__box {
     display: flex;
-    height: 482px;
+    height: 480px;
     width: 100%;
     flex-wrap: wrap;
     flex-direction: column;
@@ -244,7 +247,7 @@
     margin-top: 0;
     margin-bottom: 45px;
     margin-left: auto;
-    margin-right: 56px;
+    margin-right: 32px;
 }
 
 .completed-projects__button-top-nav {
@@ -280,7 +283,9 @@
 }
 
 .completed-projects__title {
-    margin: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 34px;
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     font-style: normal;
@@ -295,7 +300,7 @@
 .completed-projects__text {
     display: block;
     width: 442px;
-    height: 86px;
+    margin-top: 0;
     margin-bottom: 42px;
 
     font-size: 14px;
@@ -308,7 +313,8 @@
     display: grid;
     grid-template-columns: repeat(2, 190px);
     row-gap: 34px;
-    margin-bottom: 64px;
+    margin-top: 0;
+    margin-bottom: 70px;
 }
 
 .completed-projects__dt {
@@ -334,11 +340,22 @@
 
 .completed-projects__nav {
     display: flex;
+    gap: 29px;
+}
+
+.completed-projects__nav-points {
+    display: flex;
+    gap: 18px;
 }
 
 .completed-projects__button-nav {
     background: none;
     border: 0;
+    padding: 0;
+}
+
+.completed-projects__button-nav img {
+    display: block;
 }
 
 .completed-projects__slide {
@@ -358,7 +375,7 @@
 .online-control {
     background: linear-gradient(to bottom,
             #131313 34%, #FFFFFF 34%);
-    /* я не использую отрицательны марджен, как предлагалось в уроке, т.к. при переносе блока (по БЭМ) это будет проблемно. Поэтому вот такое решение с нулевым градиентом, которое считаю лучше. */
+    /* я не использую отрицательны марджен, как предлагалось в уроке, т.к. при переносе блока (по БЭМ) это будет проблемно. Поэтому вот такое решение с нулевым градиентом, которое на мой взгляд интереснее. И блок при переносе войдёт в другое место, как влитой. */
 
     font-family: 'Nunito Sans', sans-serif;
     font-style: normal;
@@ -369,7 +386,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: auto;
     max-width: 817px;
     margin-right: auto;
     margin-left: auto;
@@ -405,21 +421,31 @@
     position: relative;
 }
 
+/* оранжевую декоративную полоску нарисовал псевдоэлементом */
 .online-control__video-container::after {
     content: "";
     display: block;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 34px;
+
     background: #E3B873;
     height: 2px;
     width: 55px;
-    margin-top: 55px;
-    margin-bottom: 34px;
     border-radius: 2px;
 }
 
 .online-control__video {
+    display: block;
+    padding: 0;
+    margin-bottom: 62px;
     filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.15));
+
+}
+
+.online-control__video-mobile {
+    display: none;
 }
 
 .online-control__play-button {
@@ -427,21 +453,26 @@
     top: calc(434px / 2 - 145px / 2);
     left: calc(817px / 2 - 145px / 2);
 
-    width: 145px;
-    height: 145px;
-
-    background: none;
+    padding: 0;
+    margin: 0;
     border: 0;
+    background: none;
     cursor: pointer;
 }
 
 .online-control__play-button-img {
     display: block;
+    margin: 0;
+    padding: 0;
+    width: 145px;
 }
 
 .online-control__text {
     width: 681px;
-    margin: auto;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc(92px - 37px);
 
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -457,15 +488,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 58px;
+    column-gap: 58px;
+    flex-wrap: wrap;
 
-    width: 769px;
+    width: 780px;
+    margin-bottom: calc(148px / 2);
+    /* сделал калькуляцию для более удобного переноса блоков без наружения вёрски. Марджен поделил между соседними секциями (этой и нижней) */
 }
 
 .online-control__lable {
     display: flex;
     flex-direction: column;
-    padding-top: 48px;
 
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -474,6 +507,10 @@
     line-height: 21px;
 
     color: rgba(54, 54, 54, 0.5);
+}
+
+.online-control__span-desktop-of {
+    display: none;
 }
 
 .online-control__input {
@@ -525,6 +562,7 @@
 /* Check */
 .check {
     display: block;
+    margin: 0;
 }
 
 .check__input {
@@ -582,7 +620,7 @@
     margin-left: 26px;
 }
 
-/* текст c с модификатором сопровождающий чекбок (белый) */
+/* текст с модификатором сопровождающий чекбок (белый) */
 .check__text--white {
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -606,6 +644,7 @@
     margin-right: auto;
     margin-left: auto;
     position: relative;
+    padding-top: calc(148px / 2);
 }
 
 .types-of-repair__title {
@@ -615,7 +654,7 @@
     gap: 13px;
 
     width: 196px;
-    margin-top: 148px;
+    margin-top: 0;
     margin-bottom: 31px;
 
     font-family: 'Yeseva One';
@@ -632,6 +671,7 @@
 .types-of-repair__list {
     display: flex;
     gap: 30px;
+    margin-top: 0;
 
     padding-left: 0;
     height: auto;
@@ -730,7 +770,7 @@
 /* section-5 deal-steps */
 .deal-steps {
     width: 100%;
-    padding-bottom: 242px;
+    padding-bottom: 95px;
 }
 
 .deal-steps__wrapper {
@@ -909,21 +949,29 @@
     text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
 }
 
+.deal-steps__discount img {
+    display: block;
+}
+
+.deal-steps__discount-pitch {
+    /* display: block; */
+    padding-bottom: 20px;
+}
 
 
 /* section-6 we-realize-fantasies */
 .we-realize-fantasies {
+    padding-top: 115px;
+    padding-bottom: calc(40px + 68px / 2);
+}
+
+.we-realize-fantasies__wrapper {
     background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
 
     height: 864px;
     background-image: url(../img/bg_fantasies_dark.jpg);
     background-size: cover;
 
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 38px;
 }
 
 .we-realize-fantasies__container {
@@ -941,7 +989,6 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-
 }
 
 .we-realize-fantasies__title {
@@ -962,6 +1009,12 @@
 .we-realize-fantasies__list {
     list-style-type: none;
     padding: 0;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
 }
 
 
@@ -1020,10 +1073,7 @@
     margin-right: auto;
     margin-left: auto;
     position: relative;
-
-    background-image: url(../img/bg_city.png);
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    padding-top: calc(68px / 2);
 }
 
 .clients__title {
@@ -1033,7 +1083,7 @@
     gap: 13px;
 
     width: 196px;
-    margin-top: 110px;
+    margin-top: 0;
     margin-bottom: 24px;
 
     font-family: 'Yeseva One';
@@ -1076,7 +1126,6 @@
 .clients__card {
     display: flex;
     flex-direction: column;
-    padding-bottom: 355px;
 
 }
 
@@ -1164,12 +1213,29 @@
     padding: 11px 20px 11px 17px;
 }
 
-/* clients_form */
-.clients__wrapping-form {
+
+/* section-8 contact-us */
+.contact-us {}
+
+.contact-us__top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 355px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+    background-image: url(../img/bg_city.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.contact-us__wrapping-form {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 885px;
+    top: 115px;
 
     background: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
@@ -1177,7 +1243,7 @@
 }
 
 
-.clients__title-form {
+.contact-us__title-form {
     margin-top: 34px;
     margin-left: auto;
     margin-right: auto;
@@ -1195,7 +1261,7 @@
     color: #FFFFFF;
 }
 
-.clients__form {
+.contact-us__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1204,7 +1270,7 @@
     width: 883px;
 }
 
-.clients__fieldset {
+.contact-us__fieldset {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1220,13 +1286,13 @@
     height: 139px;
 }
 
-.clients__form-div {
+.contact-us__form-div {
     display: flex;
 
     gap: 58px;
 }
 
-.clients__label {
+.contact-us__label {
     display: flex;
     flex-direction: column;
 
@@ -1239,7 +1305,7 @@
     color: rgba(255, 255, 255, 0.5);
 }
 
-.clients__input {
+.contact-us__input {
     width: 231px;
     border: none;
     background: transparent;
@@ -1248,7 +1314,7 @@
     padding-bottom: 10px;
 }
 
-.clients__input--question {
+.contact-us__input--question {
     width: 517px;
     border: none;
     background: transparent;
@@ -1257,7 +1323,7 @@
     padding-bottom: 10px;
 }
 
-.clients__input::placeholder {
+.contact-us__input::placeholder {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -1267,7 +1333,7 @@
     color: #FFFFFF;
 }
 
-.clients__input--question::placeholder {
+.contact-us__input--question::placeholder {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
@@ -1277,7 +1343,7 @@
     color: #FFFFFF;
 }
 
-.clients__check {
+.contact-us__check {
     display: block;
     /* margin-top: 48px; */
     margin-left: auto;
@@ -1285,7 +1351,7 @@
     margin-bottom: 50px;
 }
 
-.clients__button {
+.contact-us__button {
     min-width: max-content;
     background: #E3B873;
     box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
@@ -1312,20 +1378,18 @@
     color: #FFFFFF;
 }
 
-
-/* section-8 map */
-.map {
+.contact-us__bottom-container {
     background-color: #181818;
 
     background-image: url(../img/bg_for_map-dark.jpg);
-    /* в этом блоке специально подставил фоном готовую картинку уже затемнённую (экспортнул несколько слоёв в один из Фигмы), т.к. считаю, в реальном проекте всё должно соответствовать дизайн-макету и процент затемнения в том числе. Тут диктует тонкости дизайнер, а не на угад (примерно) должен делать верстальщик... Понятно, что ситуации в жизни разные, но как минимум я бы всё обсудил с дизайнером. Сделал это не для облегчения своей задачи в вёрстке. Я умею делать наложение слоя затемнения. С наложением сделал фон  первой секции turnkey-repair, а эту так. Решил показать два варианта. */
+    /* в этом блоке специально подставил фоном готовую картинку уже затемнённую (экспортнул несколько слоёв в один из Фигмы), т.к. считаю, в реальном проекте всё должно соответствовать дизайн-макету и процент затемнения в том числе. Тут диктует тонкости дизайнер, а не на угад (примерно) должен делать верстальщик... Понятно, что ситуации в жизни разные, но как минимум я бы всё обсудил с дизайнером. Добавлю, что сделал это не для облегчения своей задачи в вёрстке. Я умею делать наложение слоя затемнения. С наложением сделал фон  первой секции turnkey-repair, а эту альтернативным методом. Решил показать два варианта. */
 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.map__address {
+.contact-us__address {
     display: block;
     width: 589px;
     margin-left: auto;
@@ -1345,11 +1409,11 @@
     color: #E3B873;
 }
 
-.map__br-mobile {
+.contact-us__br-mobile {
     display: none;
 }
 
-.map__icons {
+.contact-us__icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1357,21 +1421,21 @@
     margin-bottom: 43px;
 }
 
-.map__icon {
+.contact-us__icon {
     width: 28px;
 }
 
-.map__warp {
+.contact-us__map-warp {
     display: block;
     margin: auto;
     width: 925px;
 }
 
-.map__img {
+.contact-us__map-img {
     margin-bottom: 66px;
 }
 
-.map__img-mobile {
+.contact-us__map-img-mobile {
     display: none;
 }
 
@@ -1390,22 +1454,23 @@
     margin-left: auto;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 48px 0;
+    padding-top: 48px;
+    padding-bottom: 48px;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 95px 68px 45px;
 }
 
 .footer__logo {
-    margin-right: 95px;
+    margin-left: 0;
+    margin-right: 122px;
+    padding: 0;
 }
 
 .footer__navigation {
     display: flex;
-    align-items: center;
     gap: 47px;
+    margin-right: 96px;
 
     text-transform: uppercase;
 }
@@ -1425,6 +1490,7 @@
 .footer__telephone {
     display: block;
     min-width: max-content;
+    margin: 0 45px 0 0;
 
     font-size: 11px;
     line-height: 15px;
@@ -1434,6 +1500,9 @@
 }
 
 .footer__button {
+    margin: 0;
+    padding: 13px 39px;
+
     min-width: max-content;
     background: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
@@ -1446,406 +1515,6 @@
     line-height: 15px;
     text-align: center;
     text-transform: uppercase;
-
-    color: #FFFFFF;
-    width: 161px;
-    height: 37px;
     font-style: italic;
-}
-
-
-
-@media (max-width: 1299px) {
-
-    /* объекты, которые скрываются в мобильной версии */
-    .header__button,
-    .header__navigation,
-    .completed-projects__top-nav,
-    .completed-projects__nav,
-    .we-realize-fantasies__list,
-    .we-realize-fantasies__slide-show,
-    .clients__title,
-    .clients__text,
-    .clients__list,
-    .map__img,
-    .deal-steps,
-    .footer {
-        display: none;
-    }
-
-
-    /* объекты, которые показываются только в мобильной версии и другие корректировки в мобилке */
-    .header__container {
-        max-width: 339px;
-    }
-
-    .header__logo {
-        margin-right: auto;
-    }
-
-    .header__telephone {
-        color: #FFFFFF;
-    }
-
-
-    /* turnkey-repair */
-    .turnkey-repair {
-        height: 476px;
-        width: 375px;
-        background-image: url(../img/bg_big-m.jpg);
-    }
-
-    .turnkey-repair__container {
-        max-width: 339px;
-    }
-
-    .turnkey-repair__title {
-        width: 339px;
-        padding-top: 85px;
-
-        font-size: 23px;
-        line-height: 132.83%;
-    }
-
-    .turnkey-repair__text {
-        max-width: 339px;
-        margin-bottom: 32px;
-
-        font-size: 14px;
-        line-height: 135.84%;
-    }
-
-    .turnkey-repair__button1 {
-        width: 339px;
-        height: 51px;
-        margin-bottom: 26px;
-    }
-
-    .turnkey-repair__br-mobile {
-        display: inline;
-    }
-
-    .turnkey-repair__button2 {
-        width: 339px;
-        height: 51px;
-    }
-
-    .turnkey-repair__img-overlay {
-        height: 478px;
-        margin-top: 60px;
-    }
-
-
-    /* completed-projects */
-    .completed-projects__container {
-        max-width: 339px;
-    }
-
-    .completed-projects__box {
-        width: 339px;
-
-    }
-
-    .completed-projects__title {
-        margin-left: auto;
-        margin-right: auto;
-        width: 253px;
-
-        font-size: 22px;
-        line-height: 138.6%;
-        text-align: center;
-    }
-
-    .completed-projects__text {
-        width: 311px;
-
-        font-size: 11px;
-        line-height: 158.48%;
-
-        text-align: center;
-
-    }
-
-    .completed-projects__slide {
-        width: 340px;
-        height: 242px;
-    }
-
-    .completed-projects__controls-mobile {
-        display: block;
-    }
-
-    .completed-projects__button-mobile {
-        background: none;
-        border: 0px;
-        cursor: pointer;
-    }
-
-
-    /* online-control */
-    .online-control {
-        background: linear-gradient(to bottom, #131313 90%, #FFFFFF 90%);
-    }
-
-    .online-control__container {
-        max-width: 340px;
-    }
-
-    .online-control__title {
-        font-size: 22px;
-        line-height: 138.6%;
-    }
-
-    .online-control__video-container {
-        width: 340px;
-        height: 207px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .online-control__video {
-        width: 340px;
-        height: 207px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .online-control__play-button {
-        top: calc(207px / 2 - 145px / 2);
-        left: calc(340px / 2 - 65px / 2);
-    }
-
-    .online-control__play-button-img {
-        width: 65px;
-    }
-
-    .online-control__video-container::after {
-        margin-top: 8px;
-    }
-
-    .online-control__text {
-        width: 340px;
-        margin-top: 35px;
-
-        font-size: 11px;
-        line-height: 169.8%;
-        color: #FFFFFF;
-    }
-
-    .online-control__form {
-        flex-direction: column;
-        gap: 1px;
-        width: 340px;
-    }
-
-    .online-control__lable {
-        padding-top: 63px;
-
-        font-size: 13px;
-        line-height: 21px;
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    .online-control__input {
-        width: 340px;
-        padding-top: 7px;
-        padding-bottom: 6px;
-        margin: 10px;
-
-        background: transparent;
-        border-bottom: 1px solid #FFFFFF;
-    }
-
-    .online-control__input::placeholder {
-        font-size: 14px;
-        line-height: 138.72%;
-
-        color: #FFFFFF;
-    }
-
-
-    /* types-of-repair */
-    .types-of-repair {
-        max-width: 340px;
-    }
-
-    .types-of-repair__title {
-        margin-top: 83px;
-
-        font-size: 22px;
-        line-height: 138.6%;
-    }
-
-    .types-of-repair__list {
-        flex-direction: column;
-        gap: 59px;
-    }
-
-    .types-of-repair__option {
-        align-items: flex-start;
-    }
-
-    .types-of-repair__img {
-        width: 340px;
-        height: 365px;
-    }
-
-    .types-of-repair__substrate {
-        width: 270px;
-        min-height: 241px;
-    }
-
-    .types-of-repair__category {
-        font-size: 15px;
-        line-height: 138.6%;
-    }
-
-    .types-of-repair__description {
-        font-size: 13px;
-        line-height: 169.8%;
-    }
-
-    .types-of-repair__price {
-        padding: 12px 16px;
-
-        font-size: 15px;
-        line-height: 138.6%;
-    }
-
-
-    /* we-realize-fantasies */
-    .we-realize-fantasies {
-        height: auto;
-
-        background: linear-gradient(to top, #131313 50%, #FFFFFF 50%);
-        background-image: url();
-    }
-
-    .we-realize-fantasies__container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .we-realize-fantasies__box-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .we-realize-fantasies__title {
-        padding-top: 45px;
-        margin-bottom: 24px;
-
-        font-size: 22px;
-        line-height: 138.6%;
-
-        text-align: center;
-    }
-
-    .we-realize-fantasies__slide-show-mobile {
-        display: block;
-    }
-
-    .we-realize-fantasies__controls-mobile {
-        display: block;
-    }
-
-    .we-realize-fantasies__button-mobile {
-        background: none;
-        border: 0px;
-        cursor: pointer;
-
-    }
-
-    /* clients */
-    .clients {
-        background-color: #131313;
-    }
-
-    .clients__wrapping-form {
-        position: static;
-        top: auto;
-        width: auto;
-    }
-
-    .clients__title-form {
-        margin-top: 52px;
-    }
-
-    .clients__form {
-        width: 340px;
-    }
-
-    .clients__fieldset {
-        margin-bottom: 0;
-        width: 340px;
-        height: auto;
-    }
-
-    .clients__form-div {
-        flex-direction: column;
-        width: 340px;
-    }
-
-    .clients__label {
-        width: 340px;
-
-    }
-
-    .clients__input {
-        width: 340px;
-        border-bottom: 1px solid #FFFFFF;
-    }
-
-    .clients__input--question {
-        width: 340px;
-        border-bottom: 1px solid #FFFFFF;
-    }
-
-    .clients__check {
-        margin-top: 23px;
-        margin-bottom: 63px;
-        margin-left: 0;
-    }
-
-    .clients__button {
-        margin-bottom: 46px;
-        width: 340px;
-    }
-
-
-    /* map */
-    .map {
-        background-image: url();
-        background-color: #131313;
-        margin: 0;
-        height: auto;
-        padding-bottom: 49px;
-    }
-
-    .map__img-mobile {
-        display: block;
-        margin: auto;
-    }
-
-    .map__address {
-        padding-top: 42px;
-        width: 312px;
-        margin-bottom: 24px;
-
-        font-size: 18px;
-        line-height: 138.6%;
-    }
-
-    .map__br-mobile {
-        display: inline-block;
-    }
-
-    .map__icons {
-        margin-bottom: 0;
-        gap: 21px;
-    }
-
-    .map__icon {
-        width: 39px;
-    }
+    color: #FFFFFF;
 }

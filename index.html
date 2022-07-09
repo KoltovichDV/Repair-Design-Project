@@ -20,8 +20,8 @@
 <body class="body">
     <header class="header">
         <div class="header__container">
-            <img class="header__logo" src="./img/Logo-IC_Repair-Design-Project.svg" alt="Logo IC Repair Design Project"
-                width="180" height="10">
+            <img class="header__logo" src="./img/Logo-IC_Repair-Design-Project.svg" width="180" height="10"
+                alt="Logo IC Repair Design Project">
             <!-- Понимаю, что в макете логотип это просто шрифт, который используется во всём макете, но я логотип перевёл в svg специально, т.к. обычно так поступаю. За частую в лого уникальный шрифт из нейминга в бренд-буке и шаг вправо/влево считается побегом. Чтобы логотип не поломался при любом раскладе, сделал так -->
             <nav class="header__navigation">
                 <a class="header__link header__link--current" href="./index.html">Home</a>
@@ -33,6 +33,7 @@
             </nav>
             <a class="header__telephone" href="./blank.html" target="_blank">+7 (928) 768-32-39</a>
             <button class="header__button">REQUEST A CALL</button>
+            <!-- все кнопки в макете привязаны больше к размеру, а не внутренним падингам. Поэтому сделал их с фиксированным размером в соответствии с макетом. Не понравилось, что у дизайнера разные атрибуты шрифтов в кнопках. Идею его не оценил, но сделал в соответствии с макетом. Капексом пишу шрифт в коде просто для удобства восприятия. text-transform: uppercase в css присутствует. -->
         </div>
     </header>
 
@@ -53,7 +54,10 @@
                 <!-- в мобильном макете форматирование этого блока текста, конечно жесть... Я бы побил дизайнера :-). Сделал его крайне спорную задумку по форматированию текста добавив br-ку с классом, которая скрывается в десктопной версии и отображатеся только в мобильной -->
 
                 <button class="button turnkey-repair__button1">CALCULATE THE COST</button>
-                <button class="button turnkey-repair__button2">SUBMIT YOUR APPLICATION</button>
+                <button class="button turnkey-repair__button2"><span class="turnkey-repair__span-mobile">SUBMIT YOUR
+                    </span>APPLICATION</button>
+                <!-- не понял на счет разных названий в кнопке выше в мобилке и в десктопе. Это проверка на внимательность или рассеянность дизайнера? Но я сделал это через спан и дисплей нан -->
+
             </div>
             <div class="turnkey-repair__img-overlay"></div>
         </section>
@@ -111,17 +115,19 @@
                             <img src="./img/icon/icon_arrow-left.svg" alt="icon arrow left to back project">
                         </button>
 
-                        <button class="completed-projects__button-nav" aria-label="selected slide">
-                            <img src="./img/icon/icon_point_active.svg" alt="icon active project">
-                        </button>
+                        <div class="completed-projects__nav-points">
+                            <button class="completed-projects__button-nav" aria-label="selected slide">
+                                <img src="./img/icon/icon_point_active.svg" alt="icon active project">
+                            </button>
 
-                        <button class="completed-projects__button-nav" aria-label="next slide">
-                            <img src="./img/icon/icon_point_no-active.svg" alt="icon no active project go next">
-                        </button>
+                            <button class="completed-projects__button-nav" aria-label="next slide">
+                                <img src="./img/icon/icon_point_no-active.svg" alt="icon no active project go next">
+                            </button>
 
-                        <button class="completed-projects__button-nav" aria-label="next slide">
-                            <img src="./img/icon/icon_point_no-active.svg" alt="icon no active project go next">
-                        </button>
+                            <button class="completed-projects__button-nav" aria-label="next slide">
+                                <img src="./img/icon/icon_point_no-active.svg" alt="icon no active project go next">
+                            </button>
+                        </div>
 
                         <button class="completed-projects__button-nav" aria-label="forward">
                             <img src="./img/icon/icon_arrow-right.svg" alt="icon arrow right to next project">
@@ -132,38 +138,43 @@
                     <div class="completed-projects__img-box">
                         <picture class="completed-projects__slide">
                             <source srcset="./img/slide2-m.jpg" media="(max-width: 1299px)">
-                            <img src="./img/slide1.jpg" 
-                                alt="interior at the window of the Аdmiral project">
+                            <img src="./img/slide1.jpg" alt="interior at the window of the Аdmiral project">
                         </picture>
                         <!-- подмена картинки для мобильной версии. Странно, что они разные у дизайнера в макете. Обратил внимание, что в слоях десктопной версии есть таже, что в мобильной версии, но скрыта верхним слоем. Использую в проекте 2 варината (через тег picture и в css @media скрываю display: none и подменяю) -->
 
+                        <div class="completed-projects__controls-mobile">
+                            <button class="completed-projects__button-mobile" aria-label="back">
+                                <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
+                            </button>
+                            <button class="completed-projects__button-mobile" aria-label="forward">
+                                <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
+                            </button>
+                            <!-- кнопки смены проектов и слайдов для мобильной версии сопроводил поясняющим описанием, если картинки заглючат и не загрузятся -->
+                        </div>
                     </div>
-                </div>
-                <div class="completed-projects__controls-mobile">
-                    <button class="completed-projects__button-mobile" aria-label="back">
-                        <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
-                    </button>
-                    <button class="completed-projects__button-mobile" aria-label="forward">
-                        <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
-                    </button>
-                    <!-- кнопки смены проектов и слайдов для мобильной версии сопроводил поясняющим описанием, если картинки заглючат и не загрузятся -->
                 </div>
             </div>
         </section>
 
         <section class="online-control">
             <div class="online-control__container">
+
                 <h2 class="online-control__title">ONLINE CONTROL
                     <img class="online-control__logo" src="./img/icon/icon_camera.svg" alt="">
                 </h2>
+
                 <div class="online-control__video-container">
                     <video class="online-control__video" width="817" height="434" poster="./img/video_slide_dark.jpg">
                     </video>
+                    <video class="online-control__video-mobile" width="340" height="207"
+                        poster="./img/video_slide_dark-m.jpg">
+                    </video>
+
                     <button class="online-control__play-button" aria-label="play">
-                        <img class="online-control__play-button-img" src="./img/icon/icon_play.svg" width="145"
-                            height="145" alt="">
+                        <img class="online-control__play-button-img" src="./img/icon/icon_play.svg" alt="">
                     </button>
                 </div>
+                <!-- оформил видеоконтейнером. Два варианта для десктопа и мобильной версии отдельно, т.к. в poster-е фотки у каждой версии свои. Кнопку использую одну с перепозиционированием calc в css -->
 
                 <p class="online-control__text">
                     At each facility, a camera is installed that broadcasts the progress of work on the clock. At any
@@ -181,18 +192,20 @@
                     </label>
 
                     <label class="online-control__lable">
-                        Phone
+                        <span class="online-control__span-mobile-of">Phone</span><span
+                            class="online-control__span-desktop-of">Number</span>
+                        <!-- замена разных заголовков в лейбле в мобильной и десктоп версиях. Может косяк дизайнера или проверка на внимательность? короче я сделал, как в макете. -->
                         <input class="online-control__input" type="tel" placeholder="Your phone number:">
                     </label>
 
                     <button class="button online-control__button">SUBMIT</button>
 
+                    <label class="check">
+                        <input class="check__input" type="checkbox">
+                        <span class="check__box"></span>
+                        <span class="check__text">I agree to the processing of personal data</span>
+                    </label>
                 </form>
-                <label class="check">
-                    <input class="check__input" type="checkbox">
-                    <span class="check__box"></span>
-                    <span class="check__text">I agree to the processing of personal data</span>
-                </label>
             </div>
         </section>
 
@@ -335,55 +348,62 @@
             </div>
             <div class="deal-steps__discount-container">
                 <div class="deal-steps__discount">
-                    <img src="./img/icon/icon_pig.svg" alt="">
-                    Help save 10 - 20% of the <br>cost of materials
+                    <img src="./img/icon/icon_pig.svg" alt="piggy bank">
+                    <span class="deal-steps__discount-pitch">Help save 10 - 20% of the <br>cost of materials</span>
                 </div>
             </div>
         </section>
 
         <section class="we-realize-fantasies">
-            <div class="we-realize-fantasies__container">
-                <div class="we-realize-fantasies__box-links">
-                    <h2 class="we-realize-fantasies__title">
-                        We realize your <br>wildest fantasies
-                    </h2>
-                    <ul class="we-realize-fantasies__list">
-                        <li class=""><button class="we-realize-fantasies__button--active">American
-                                classic</button></li>
-                        <li><button class="we-realize-fantasies__button">Empire</button></li>
-                        <li><button class="we-realize-fantasies__button">Classical</button></li>
-                        <li><button class="we-realize-fantasies__button">Loft</button></li>
-                        <li><button class="we-realize-fantasies__button">Minimalism</button></li>
-                        <li><button class="we-realize-fantasies__button">Provence</button></li>
-                        <li><button class="we-realize-fantasies__button">Romanticism</button></li>
-                        <li><button class="we-realize-fantasies__button">Scandinavian style</button></li>
-                        <li><button class="we-realize-fantasies__button">Mediterranean style</button></li>
-                        <li><button class="we-realize-fantasies__button">High tech</button></li>
-                        <li><button class="we-realize-fantasies__button">Eclecticism</button></li>
-                    </ul>
-                </div>
-
-                <div class="we-realize-fantasies__slide-show">
-                    <div class="we-realize-fantasies__slide-left">
-                        <img src="./img/fantasies-1.jpg" alt="">
-                        <img src="./img/fantasies-3.jpg" alt="">
+            <div class="we-realize-fantasies__wrapper">
+                <!-- сделал двойную обвертку, т.к. будут использоваться отрицательные марджены, чтобы толкать картинки слайд-шоу за пределы блока с фоновой картинкой. Они будут залазить на соседние секшны и это будет не правильно по БЭМу (использование внешних мардженов у блока и сложность переноса в другое место). -->
+                <div class="we-realize-fantasies__container">
+                    <div class="we-realize-fantasies__box-links">
+                        <h2 class="we-realize-fantasies__title">
+                            We realize your <br>wildest fantasies
+                        </h2>
+                        <ul class="we-realize-fantasies__list">
+                            <li class=""><button class="we-realize-fantasies__button--active">American
+                                    classic</button></li>
+                            <li><button class="we-realize-fantasies__button">Empire</button></li>
+                            <li><button class="we-realize-fantasies__button">Classical</button></li>
+                            <li><button class="we-realize-fantasies__button">Loft</button></li>
+                            <li><button class="we-realize-fantasies__button">Minimalism</button></li>
+                            <li><button class="we-realize-fantasies__button">Provence</button></li>
+                            <li><button class="we-realize-fantasies__button">Romanticism</button></li>
+                            <li><button class="we-realize-fantasies__button">Scandinavian style</button></li>
+                            <li><button class="we-realize-fantasies__button">Mediterranean style</button></li>
+                            <li><button class="we-realize-fantasies__button">High tech</button></li>
+                            <li><button class="we-realize-fantasies__button">Eclecticism</button></li>
+                            <!-- реализовал блок кнопками, а не ссылками, хотя внешне похожи, т.к. это скорее всего кнопки, которые переключают слайд-шоу в этом разделе, работа которого организуется уже JS-ом -->
+                        </ul>
                     </div>
-                    <div class="we-realize-fantasies__slide-right">
-                        <img src="./img/fantasies-2.jpg" alt="">
-                        <img src="./img/fantasies-4.jpg" alt="">
-                    </div>
-                </div>
 
-                
-                <div class="we-realize-fantasies__controls-mobile">
-                    <img class="we-realize-fantasies__slide-show-mobile" src="./img/fantasies-1-m.jpg" alt="">
-                    <button class="we-realize-fantasies__button-mobile" aria-label="back">
-                        <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
-                    </button>
-                    <button class="we-realize-fantasies__button-mobile aria-label="forward">
-                        <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
-                    </button>
-                </div>
+                    <!-- слайдшоу для десктоп-версии -->
+                    <div class="we-realize-fantasies__slide-show">
+                        <div class="we-realize-fantasies__slide-left">
+                            <img src="./img/fantasies-1.jpg" alt="">
+                            <img src="./img/fantasies-3.jpg" alt="">
+                        </div>
+                        <div class="we-realize-fantasies__slide-right">
+                            <img src="./img/fantasies-2.jpg" alt="">
+                            <img src="./img/fantasies-4.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <!-- отдельная навигация и слайды для мобильной версии -->
+                    <div class="we-realize-fantasies__slide-show-mobile">
+                        <img src="./img/fantasies-1-m.jpg" width="340" height="242"
+                            alt="interior America classic with clock of center">
+                        <div class="we-realize-fantasies__controls-mobile">
+                            <button class="we-realize-fantasies__button-mobile" aria-label="back">
+                                <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
+                            </button>
+                            <button class="we-realize-fantasies__button-mobile aria-label=" forward">
+                                <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
+                            </button>
+                        </div>
+                    </div>
         </section>
 
         <section class="clients">
@@ -484,56 +504,63 @@
                 </li>
             </ul>
 
-            <div class="clients__wrapping-form">
-                <p class="clients__title-form">Have Any Questions?</p>
-                <form class="clients__form">
-                    <fieldset class="clients__fieldset">
-                        <div class="clients__form-div">
-                            <label class="clients__label">
-                                Name
-                                <input class="clients__input" type="text" placeholder="What is your name:">
-                            </label>
-
-                            <label class="clients__label">
-                                Phone
-                                <input class="clients__input" type="tel" placeholder="Your phone number:">
-                            </label>
-                        </div>
-
-                        <label class="clients__label">
-                            Question
-                            <input class="clients__input--question" type="text" placeholder="I want to know:">
-                        </label>
-                    </fieldset>
-
-                    <label class="check clients__check">
-                        <input class="check__input" type="checkbox">
-                        <span class="check__box"></span>
-                        <span class="check__text--white">I agree to the processing of personal data</span>
-                    </label>
-
-                    <button class="clients__button">Submit</button>
-                </form>
             </div>
         </section>
 
-        <section class="map">
-            <h2 class="visually-hidden">Map</h2>
-            <div class="map__container">
+        <section class="contact-us">
+            <div class="contact-us__top-container">
+                <div class="contact-us__wrapping-form">
+                    <h2 class="contact-us__title-form">Have Any Questions?</h2>
+                    <form class="contact-us__form">
+                        <fieldset class="contact-us__fieldset">
+                            <div class="contact-us__form-div">
+                                <label class="contact-us__label">
+                                    Name
+                                    <input class="contact-us__input" type="text" placeholder="What is your name:">
+                                </label>
 
-                <img class="map__img-mobile" src="./img/map-m.jpg" width="340" height="255" alt="shopping center map">
-                <address class="map__address">
-                    Rostov-on-Don, Nansen St., 239 Shopping Center Decorum <br class="map__br-mobile">Tel +7 (928) 768 32 29
-                </address>
+                                <label class="contact-us__label">
+                                    Phone
+                                    <input class="contact-us__input" type="tel" placeholder="Your phone number:">
+                                </label>
+                            </div>
 
-                <div class="map__icons">
-                    <a href="./blank.html"><img class="map__icon" src="./img/icon/icon_e-mail.svg" alt="e-mail"></a>
-                    <a href="./blank.html"><img class="map__icon" src="./img/icon/icon_instagram.svg" alt="instagram"></a>
+                            <label class="contact-us__label">
+                                Question
+                                <input class="contact-us__input--question" type="text" placeholder="I want to know:">
+                            </label>
+                        </fieldset>
+
+                        <label class="check contact-us__check">
+                            <input class="check__input" type="checkbox">
+                            <span class="check__box"></span>
+                            <span class="check__text--white">I agree to the processing of personal data</span>
+                        </label>
+
+                        <button class="contact-us__button">Submit</button>
+                    </form>
                 </div>
+            </div>
 
-                <div class="map__warp">
-                    <img class="map__img" src="./img/map.jpg" width="925" height="466" alt="shopping center map">
-                </div>
+            <div class="contact-us__bottom-container">
+                    <img class="contact-us__map-img-mobile" src="./img/map-m.jpg" width="340" height="255"
+                        alt="shopping center map">
+                    <address class="contact-us__address">
+                        Rostov-on-Don, Nansen St., 239 Shopping Center Decorum <br class="contact-us__br-mobile">Tel +7
+                        (928) 768
+                        32 29
+                    </address>
+
+                    <div class="contact-us__icons">
+                        <a href="./blank.html"><img class="contact-us__icon" src="./img/icon/icon_e-mail.svg" alt="e-mail"></a>
+                        <a href="./blank.html"><img class="contact-us__icon" src="./img/icon/icon_instagram.svg"
+                                alt="instagram"></a>
+                    </div>
+
+                    <div class="contact-us__map-warp">
+                        <img class="contact-us__map-img" src="./img/map.jpg" width="925" height="466" alt="shopping center map">
+                    </div>
+
             </div>
         </section>
     </main>
