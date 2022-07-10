@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles_desktop.css">
     <link rel="stylesheet" href="./css/styles_mobile.css">
+    <script defer src="./js/script.js"></script>
 
     <title>Turnkey Repair in the city of Rostov-on-Don</title>
 </head>
@@ -107,7 +108,7 @@
                         <div>
                             <dt class="completed-projects__dt">Repair Cost:</dt>
                             <dd class="completed-projects__dd">Upon request</dd>
-                            </di>
+                        </div>
                     </dl>
 
                     <div class="completed-projects__nav">
@@ -137,7 +138,7 @@
 
                     <div class="completed-projects__img-box">
                         <picture class="completed-projects__slide">
-                            <source srcset="./img/slide2-m.jpg" media="(max-width: 1299px)">
+                            <source srcset="./img/slide2-m.jpg" media="(max-width: 767px)">
                             <img src="./img/slide1.jpg" alt="interior at the window of the Аdmiral project">
                         </picture>
                         <!-- подмена картинки для мобильной версии. Странно, что они разные у дизайнера в макете. Обратил внимание, что в слоях десктопной версии есть таже, что в мобильной версии, но скрыта верхним слоем. Использую в проекте 2 варината (через тег picture и в css @media скрываю display: none и подменяю) -->
@@ -195,7 +196,7 @@
                         <span class="online-control__span-mobile-of">Phone</span><span
                             class="online-control__span-desktop-of">Number</span>
                         <!-- замена разных заголовков в лейбле в мобильной и десктоп версиях. Может косяк дизайнера или проверка на внимательность? короче я сделал, как в макете. -->
-                        <input class="online-control__input" type="tel" placeholder="Your phone number:">
+                        <input class="online-control__input" type="tel" data-tel-input placeholder="Your phone number:" maxlength="18">
                     </label>
 
                     <button class="button online-control__button">SUBMIT</button>
@@ -217,7 +218,7 @@
             <ul class="types-of-repair__list">
                 <li class="types-of-repair__option">
                     <picture class="types-of-repair__img">
-                        <source srcset="./img/type_repair-1-m.jpg" media="(max-width: 1299px)">
+                        <source srcset="./img/type_repair-1-m.jpg" media="(max-width: 767px)">
                         <img src="./img/type_repair-1.jpg" alt="Interior Redecorating">
                     </picture>
                     <div>
@@ -241,7 +242,7 @@
 
                 <li class="types-of-repair__option">
                     <picture class="types-of-repair__img">
-                        <source srcset="./img/type_repair-2-m.jpg" media="(max-width: 1299px)">
+                        <source srcset="./img/type_repair-2-m.jpg" media="(max-width: 767px)">
                         <img src="./img/type_repair-2.jpg" alt="Interior Overhaul">
                     </picture>
                     <div>
@@ -265,7 +266,7 @@
 
                 <li class="types-of-repair__option">
                     <picture class="types-of-repair__img">
-                        <source srcset="./img/type_repair-3-m.jpg" media="(max-width: 1299px)">
+                        <source srcset="./img/type_repair-3-m.jpg" media="(max-width: 767px)">
                         <img src="./img/type_repair-3.jpg" alt="Interior Designer Repair">
                     </picture>
                     <div>
@@ -326,7 +327,7 @@
 
                                 <label class="deal-steps__label">
                                     Phone
-                                    <input class="deal-steps__input" type="tel" placeholder="Your phone number:">
+                                    <input class="deal-steps__input" type="tel" data-tel-input placeholder="Your phone number:" maxlength="18">
                                 </label>
 
                                 <label class="deal-steps__label">
@@ -399,11 +400,13 @@
                             <button class="we-realize-fantasies__button-mobile" aria-label="back">
                                 <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
                             </button>
-                            <button class="we-realize-fantasies__button-mobile aria-label=" forward">
+                            <button class="we-realize-fantasies__button-mobile" aria-label="forward">
                                 <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
         </section>
 
         <section class="clients">
@@ -420,7 +423,7 @@
                 <li class="clients__card">
                     <div class="clients__card-warp">
                         <h3 class="clients__name">
-                            <img class="clients__avatar" src="./img/avatar_1.jpg" width="76px" height="76px"
+                            <img class="clients__avatar" src="./img/avatar_1.jpg" width="76" height="76"
                                 alt="portrait of Fedosova Maria Konstantinovna">
                             Fedosova Maria Konstantinovna
                         </h3>
@@ -449,7 +452,7 @@
                 <li class="clients__card">
                     <div class="clients__card-warp">
                         <h3 class="clients__name">
-                            <img class="clients__avatar" src="./img/avatar_2.jpg" width="76px" height="76px"
+                            <img class="clients__avatar" src="./img/avatar_2.jpg" width="76" height="76"
                                 alt="portrait of Afanasyev Sergey Alexandrovich">
                             Afanasyev Sergey Alexandrovich
                         </h3>
@@ -477,7 +480,7 @@
                 <li class="clients__card">
                     <div class="clients__card-warp">
                         <h3 class="clients__name">
-                            <img class="clients__avatar" src="./img/avatar_3.jpg" width="76px" height="76px"
+                            <img class="clients__avatar" src="./img/avatar_3.jpg" width="76" height="76"
                                 alt="portrait of Kiriev Egor Leonidovich">
                             Kiriev Egor Leonidovich
                         </h3>
@@ -503,8 +506,6 @@
                     </div>
                 </li>
             </ul>
-
-            </div>
         </section>
 
         <section class="contact-us">
@@ -521,15 +522,15 @@
 
                                 <label class="contact-us__label">
                                     Phone
-                                    <input class="contact-us__input" type="tel" placeholder="Your phone number:">
+                                    <input class="contact-us__input" type="tel" data-tel-input placeholder="Your phone number:" maxlength="18">
                                 </label>
                             </div>
 
-                            <label class="contact-us__label">
-                                Question
-                                <input class="contact-us__input--question" type="text" placeholder="I want to know:">
-                            </label>
                         </fieldset>
+                        <label class="contact-us__label-textarea">
+                            Question
+                            <textarea class="contact-us__textarea" name="comment" rows="1" cols="20" wrap="hard" placeholder="I want to know:" style="overflow:hidden;"></textarea>
+                        </label>
 
                         <label class="check contact-us__check">
                             <input class="check__input" type="checkbox">
@@ -543,23 +544,25 @@
             </div>
 
             <div class="contact-us__bottom-container">
-                    <img class="contact-us__map-img-mobile" src="./img/map-m.jpg" width="340" height="255"
+                <img class="contact-us__map-img-mobile" src="./img/map-m.jpg" width="340" height="255"
+                    alt="shopping center map">
+                <address class="contact-us__address">
+                    Rostov-on-Don, Nansen St., 239 Shopping Center Decorum <br class="contact-us__br-mobile">Tel +7
+                    (928) 768
+                    32 29
+                </address>
+
+                <div class="contact-us__icons">
+                    <a href="./blank.html" target="_blank"><img class="contact-us__icon" src="./img/icon/icon_e-mail.svg"
+                            alt="e-mail"></a>
+                    <a href="./blank.html" target="_blank"><img class="contact-us__icon" src="./img/icon/icon_instagram.svg"
+                            alt="instagram"></a>
+                </div>
+
+                <div class="contact-us__map-warp">
+                    <img class="contact-us__map-img" src="./img/map.jpg" width="925" height="466"
                         alt="shopping center map">
-                    <address class="contact-us__address">
-                        Rostov-on-Don, Nansen St., 239 Shopping Center Decorum <br class="contact-us__br-mobile">Tel +7
-                        (928) 768
-                        32 29
-                    </address>
-
-                    <div class="contact-us__icons">
-                        <a href="./blank.html"><img class="contact-us__icon" src="./img/icon/icon_e-mail.svg" alt="e-mail"></a>
-                        <a href="./blank.html"><img class="contact-us__icon" src="./img/icon/icon_instagram.svg"
-                                alt="instagram"></a>
-                    </div>
-
-                    <div class="contact-us__map-warp">
-                        <img class="contact-us__map-img" src="./img/map.jpg" width="925" height="466" alt="shopping center map">
-                    </div>
+                </div>
 
             </div>
         </section>

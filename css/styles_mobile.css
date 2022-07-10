@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
 
     /* объекты, которые скрываются в мобильной версии */
     .header__button,
@@ -17,6 +17,15 @@
 
 
     /* объекты, которые показываются только в мобильной версии и другие корректировки в мобилке */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* для мобильника зафиксировал шапку, чтобы не уплывала при скроулинге. Дизайнер конечно странный тип... Вообще выпилил меню навигации и не добавил бургер. */
+}
+
     .header__container {
         justify-content: space-between;
         max-width: 339px;
@@ -39,6 +48,7 @@
     /* turnkey-repair */
     .turnkey-repair {
         height: 476px;
+        margin-top: 57px;
         margin-left: auto;
         margin-right: auto;
         background-image: url(../img/bg_big-m.jpg);
@@ -253,6 +263,7 @@
     .online-control__span-desktop-of {
         display: inline;
     }
+
     /* выше классы для замены разных заголовков в лейбле в мобильной и десктоп версиях. Может косяк дизайнера или проверка на внимательность? короче я сделал, как в макете. */
 
     .online-control__input {
@@ -263,6 +274,16 @@
 
         background: transparent;
         border-bottom: 1px solid #FFFFFF;
+
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 138.72%;
+        /* or 19px */
+
+
+        color: #FFFFFF;
     }
 
     .online-control__input::placeholder {
@@ -350,10 +371,10 @@
         padding-top: 0;
         padding-bottom: 0;
     }
-    
+
     .we-realize-fantasies__wrapper {
         height: auto;
-    
+
         background: linear-gradient(to top, #131313 34%, #FFFFFF 34%);
 
     }
@@ -424,14 +445,15 @@
     }
 
     .contact-us__fieldset {
-        margin-bottom: 0;
+        margin-bottom: 63px;
         width: 340px;
-        height: auto;
+        /* height: auto; */
     }
 
     .contact-us__form-div {
         flex-direction: column;
         width: 340px;
+        gap: 63px;
     }
 
     .contact-us__label {
@@ -444,9 +466,18 @@
         border-bottom: 1px solid #FFFFFF;
     }
 
-    .contact-us__input--question {
+    .contact-us__label-textarea {
+        width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .contact-us__textarea {
         width: 340px;
         border-bottom: 1px solid #FFFFFF;
+
+        resize: vertical;
     }
 
     .contact-us__check {

@@ -253,6 +253,7 @@
 .completed-projects__button-top-nav {
     background: none;
     border: 0;
+    cursor: pointer;
 
     font-family: 'Yeseva One';
     font-style: normal;
@@ -267,6 +268,7 @@
 .completed-projects__button-top-nav--active {
     background: none;
     border: 0;
+    cursor: pointer;
 
     font-family: 'Yeseva One';
     font-style: normal;
@@ -352,6 +354,8 @@
     background: none;
     border: 0;
     padding: 0;
+
+    cursor: pointer;
 }
 
 .completed-projects__button-nav img {
@@ -522,6 +526,14 @@
     margin: 0px 0px 39px;
 
     width: 231px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #363636;
 }
 
 .online-control__input::placeholder {
@@ -563,6 +575,8 @@
 .check {
     display: block;
     margin: 0;
+
+    cursor: pointer;
 }
 
 .check__input {
@@ -885,6 +899,14 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 7px;
     padding-bottom: 10px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #FFFFFF;
 }
 
 .deal-steps__input::placeholder {
@@ -1236,6 +1258,7 @@
     flex-direction: column;
     position: absolute;
     top: 115px;
+    height: auto;
 
     background: #131313;
     box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
@@ -1272,23 +1295,18 @@
 
 .contact-us__fieldset {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    gap: 51px;
+
     border: none;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 60px;
+    margin-bottom: 49px;
 
     width: 517px;
-    height: 139px;
 }
 
 .contact-us__form-div {
     display: flex;
-
     gap: 58px;
 }
 
@@ -1307,20 +1325,59 @@
 
 .contact-us__input {
     width: 231px;
+    padding-bottom: 8px;
+
     border: none;
     background: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 7px;
-    padding-bottom: 10px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #FFFFFF;
 }
 
-.contact-us__input--question {
+.contact-us__label-textarea {
+    display: flex;
+    flex-direction: column;
     width: 517px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 46px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-us__textarea {
+    display: block;
+    width: 517px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8px;
+
+    min-height: 35px;
+    max-height: 500px;
+    resize: vertical;
     border: none;
     background: transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 7px;
-    padding-bottom: 10px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+
+    color: #FFFFFF;
 }
 
 .contact-us__input::placeholder {
@@ -1333,7 +1390,7 @@
     color: #FFFFFF;
 }
 
-.contact-us__input--question::placeholder {
+.contact-us__textarea::placeholder {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 400;
