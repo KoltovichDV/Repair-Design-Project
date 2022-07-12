@@ -57,11 +57,16 @@
 }
 
 .header__link {
+    position: relative; 
     font-size: 11px;
     line-height: 15px;
 
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.header__link:hover {
+    text-decoration: underline;
 }
 
 .header__link--current {
@@ -78,6 +83,10 @@
     text-align: right;
     text-decoration-line: underline;
     color: #E3B873;
+}
+
+.header__telephone:hover {
+    color: #ffffff;
 }
 
 .header__button {
@@ -135,7 +144,7 @@
     z-index: 1;
 }
 
-.turnkey-repair__title {
+/* .turnkey-repair__title {
     margin: 0;
     margin-bottom: 19px;
     font-family: 'Yeseva One', cursive;
@@ -148,7 +157,7 @@
     line-height: 53px;
 
     color: #FFFFFF;
-}
+} */
 
 .turnkey-repair__title--city {
     color: #E3B873;
@@ -1470,6 +1479,23 @@
     display: none;
 }
 
+.contact-us__tel {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #E3B873;
+}
+
+.contact-us__tel:hover {
+    color: #FFFFFF
+}
+
 .contact-us__icons {
     display: flex;
     justify-content: center;
@@ -1540,6 +1566,12 @@
     text-decoration: none;
 }
 
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+
+
 .footer__link--current {
     color: #E3B873;
 }
@@ -1554,6 +1586,10 @@
     text-align: right;
     text-decoration-line: underline;
     color: #E3B873;
+}
+
+.footer__telephone:hover {
+    color: #ffffff;
 }
 
 .footer__button {
