@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles_desktop.css">
+    <link rel="stylesheet" href="./css/styles_old-desktop.css">
+    <link rel="stylesheet" href="./css/styles_tablet.css">
     <link rel="stylesheet" href="./css/styles_mobile.css">
     <script defer src="./js/script.js"></script>
 
@@ -138,7 +140,7 @@
 
                     <div class="completed-projects__img-box">
                         <picture class="completed-projects__slide">
-                            <source srcset="./img/slide2-m.jpg" media="(max-width: 767px)">
+                            <source srcset="./img/slide2-m.jpg" media="(max-width: 1255px)">
                             <img src="./img/slide1.jpg" alt="interior at the window of the Аdmiral project">
                         </picture>
                         <!-- подмена картинки для мобильной версии. Странно, что они разные у дизайнера в макете. Обратил внимание, что в слоях десктопной версии есть таже, что в мобильной версии, но скрыта верхним слоем. Использую в проекте 2 варината (через тег picture и в css @media скрываю display: none и подменяю) -->
@@ -220,6 +222,7 @@
                 <li class="types-of-repair__option">
                     <picture class="types-of-repair__img">
                         <source srcset="./img/type_repair-1-m.jpg" media="(max-width: 767px)">
+                        <source srcset="./img/type_repair-1-od.jpg" media="(max-width: 1256px)">
                         <img src="./img/type_repair-1.jpg" alt="Interior Redecorating">
                     </picture>
                     <div>
@@ -244,6 +247,7 @@
                 <li class="types-of-repair__option">
                     <picture class="types-of-repair__img">
                         <source srcset="./img/type_repair-2-m.jpg" media="(max-width: 767px)">
+                        <source srcset="./img/type_repair-2-od.jpg" media="(max-width: 1256px)">
                         <img src="./img/type_repair-2.jpg" alt="Interior Overhaul">
                     </picture>
                     <div>
@@ -268,6 +272,7 @@
                 <li class="types-of-repair__option">
                     <picture class="types-of-repair__img">
                         <source srcset="./img/type_repair-3-m.jpg" media="(max-width: 767px)">
+                        <source srcset="./img/type_repair-3-od.jpg" media="(max-width: 1256px)">
                         <img src="./img/type_repair-3.jpg" alt="Interior Designer Repair">
                     </picture>
                     <div>
@@ -563,8 +568,11 @@
                 </div>
 
                 <div class="contact-us__map-warp">
-                    <img class="contact-us__map-img" src="./img/map.jpg" width="925" height="466"
-                        alt="shopping center map">
+                    <picture class="contact-us__map-img">
+                        <source srcset="./img/map-od.jpg" media="(max-width: 1264px)">
+                        <img src="./img/map.jpg"
+                            alt="shopping center map">
+                    </picture>
                 </div>
 
             </div>

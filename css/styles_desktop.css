@@ -144,7 +144,7 @@
     z-index: 1;
 }
 
-/* .turnkey-repair__title {
+.turnkey-repair__title {
     margin: 0;
     margin-bottom: 19px;
     font-family: 'Yeseva One', cursive;
@@ -157,7 +157,7 @@
     line-height: 53px;
 
     color: #FFFFFF;
-} */
+}
 
 .turnkey-repair__title--city {
     color: #E3B873;
@@ -792,7 +792,9 @@
 
 /* section-5 deal-steps */
 .deal-steps {
-    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 95px;
 }
 
@@ -801,6 +803,7 @@
     background-repeat: no-repeat;
     background-position: left bottom;
 
+    width: 100%;
     padding-top: 200px;
     padding-bottom: 30px;
 }
@@ -819,6 +822,7 @@
 .deal-steps__freeze {
     list-style-type: none;
     padding-left: 0;
+    padding-top: 30px;
     margin-top: 0;
     margin-bottom: 0;
 
@@ -985,7 +989,6 @@
 }
 
 .deal-steps__discount-pitch {
-    /* display: block; */
     padding-bottom: 20px;
 }
 
@@ -1512,10 +1515,7 @@
     display: block;
     margin: auto;
     width: 925px;
-}
-
-.contact-us__map-img {
-    margin-bottom: 66px;
+    padding-bottom: 66px;
 }
 
 .contact-us__map-img-mobile {

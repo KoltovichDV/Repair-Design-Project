@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 640px) {
 
     /* объекты, которые скрываются в мобильной версии */
     .header__button,
@@ -17,28 +17,34 @@
 
 
     /* объекты, которые показываются только в мобильной версии и другие корректировки в мобилке */
-.header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    /* для мобильника зафиксировал шапку, чтобы не уплывала при скроулинге. Дизайнер конечно странный тип... Вообще выпилил меню навигации и не добавил бургер. */
-}
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        margin: 0;
+        /* для мобильника зафиксировал шапку, чтобы не уплывала при скроулинге. Дизайнер конечно странный тип... Вообще выпилил меню навигации и не добавил бургер. */
+    }
 
     .header__container {
         justify-content: space-between;
         max-width: 339px;
+        margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
         padding-top: 23px;
         padding-bottom: 24px;
     }
 
     .header__logo {
+        margin-left: 0;
         margin-right: auto;
         padding: 0;
     }
 
     .header__telephone {
+        display: block;
         margin: 0;
         text-decoration: none;
         color: #FFFFFF;
@@ -147,6 +153,7 @@
 
     .completed-projects__img-box {
         position: relative;
+        padding-top: 0;
         margin-bottom: 37px;
     }
 
