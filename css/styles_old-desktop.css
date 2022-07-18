@@ -21,7 +21,7 @@
     .header__navigation {
         display: flex;
         gap: 40px;
-        margin-right: 65px;
+        margin-right: 55px;
     }
 
     /* section-1 turnkey-repair */
@@ -153,10 +153,11 @@
 
     /* section-6 we-realize-fantasies */
     .we-realize-fantasies__container {
-        max-width: 950px;
+        max-width:970px;
     }
 
     .we-realize-fantasies__title {
+        margin-right: 10px;
         font-size: 24px;
         line-height: 27px;
     }
@@ -167,7 +168,7 @@
     }
 
     .we-realize-fantasies__slide-show {
-        gap: 23px;
+        gap: 15px;
     }
 
     .we-realize-fantasies__slide-left {
@@ -214,7 +215,7 @@
     .footer__navigation {
         display: flex;
         gap: 40px;
-        margin-right: 65px;
+        margin-right: 55px;
     }
 
 }

@@ -1,23 +1,148 @@
-@media (max-width: 1023px) {
-        /* объекты, которые скрываются в данной версии */
-        .header__telephone,
-        .header__button,
-        .completed-projects__top-nav,
-        .deal-steps__wrapping-form,
-        .footer {
-            display: none;
-        }
+@media (max-width: 1014px) {
 
-        .header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
+    /* объекты, которые скрываются в данной версии */
+    .header__telephone,
+    .header__button,
+    .completed-projects__top-nav,
+    .completed-projects__text br,
+    .deal-steps__wrapping-form,
+    .footer {
+        display: none;
+    }
+
+    /* header */
+    .header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .header__container {
+        max-width: 640px;
+        align-items: flex-start;
+    }
+
+    .header__logo {
+        margin-left: 10px;
+        margin-right: 55px;
+    }
+
+    .header__navigation {
+        display: flex;
+        gap: 30px;
+        margin-right: 10px;
+    }
 
 
+    /* section-1 turnkey-repair */
+    .turnkey-repair {
+        height: 550px;
+    }
+
+    .turnkey-repair__img-overlay {
+        height: 550px;
+
+    }
+
+    .turnkey-repair__container {
+        max-width: 600px;
+        padding-top: 150px;
+    }
+
+    .turnkey-repair__title {
+        width: 450px;
+
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .turnkey-repair__text {
+        width: 450px;
+
+        font-size: 19px;
+        line-height: 32px;
+    }
 
 
-        
+    /* completed-projects */
+    .completed-projects {
+        padding-top: 36px;
+        padding-bottom: 0;
+    }
+
+    .completed-projects__container {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .completed-projects__box {
+        align-items: center;
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        flex-wrap: nowrap;
+
+    }
+
+    .completed-projects__title {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 22px;
+
+        width: 550px;
+
+        font-size: 22px;
+        line-height: 138.6%;
+        text-align: center;
+    }
+
+    .completed-projects__text {
+        width: 550px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+
+        font-size: 16px;
+        line-height: 158.48%;
+        text-align: center;
+    }
+
+    .completed-projects__img-box {
+        position: relative;
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .completed-projects__button-mobile img {
+        display: block;
+    }
+
+    .completed-projects__dl {
+        grid-template-columns: repeat(2, 170px);
+        order: 2;
+    }
+
+    .completed-projects__dt {
+        font-size: 18px;
+        line-height: 138.6%;
+    }
+
+    .completed-projects__dd {
+        font-size: 13px;
+        line-height: 135.84%;
+    }
+
+    .completed-projects__nav {
+        order: 1;
+        padding-left: 0;
+        padding-bottom: 60px;
+    }
+
 }
