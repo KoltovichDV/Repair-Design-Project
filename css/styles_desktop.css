@@ -387,7 +387,7 @@
 /* section-3 online-control */
 .online-control {
     background: linear-gradient(to bottom,
-            #131313 34%, #FFFFFF 34%);
+            #131313 31%, #FFFFFF 31%);
     /* я не использую отрицательны марджен, как предлагалось в уроке, т.к. при переносе блока (по БЭМ) это будет проблемно. Поэтому вот такое решение с нулевым градиентом, которое на мой взгляд интереснее. И блок при переносе войдёт в другое место, как влитой. */
 
     font-family: 'Nunito Sans', sans-serif;
@@ -1456,6 +1456,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-bottom: 66px;
 }
 
 .contact-us__address {
@@ -1513,9 +1514,9 @@
 
 .contact-us__map-warp {
     display: block;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 925px;
-    padding-bottom: 66px;
 }
 
 .contact-us__map-img-mobile {

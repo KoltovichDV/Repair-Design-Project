@@ -92,6 +92,7 @@
         margin-left: auto;
         margin-right: auto;
         height: auto;
+        padding-bottom: 100px;
         flex-wrap: nowrap;
 
     }
@@ -138,10 +139,13 @@
     .completed-projects__nav {
         order: 1;
         padding-left: 0;
-        padding-bottom: 60px;
     }
 
     /* section-3 online-control */
+    .online-control {
+        background: linear-gradient(to bottom, #131313 27%, #FFFFFF 27%);
+    }
+
     .online-control__container {
         max-width: 620px;
         margin-top: 0;
@@ -209,8 +213,24 @@
     }
 
     /* section-6 we-realize-fantasies */
+    .we-realize-fantasies {
+        padding-top: 30px;
+    }
+
     .we-realize-fantasies__container {
         max-width: 640px;
+    }
+
+
+    /* section-8 contact-us */
+    .contact-us__map-warp {
+        width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-us__map-img {
+
     }
 
     .contact-us__title-form {
@@ -265,6 +285,10 @@
 
     .contact-us__button {
         margin-bottom: 40px;
+    }
+
+    .contact-us__address {
+        /* padding-top: 100px; */
     }
 
 }
