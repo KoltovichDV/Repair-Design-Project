@@ -131,15 +131,11 @@
         display: block;
     }
 
-    /* .completed-projects__dl {
-        grid-template-columns: repeat(2, 170px);
-        order: 2;
-    } */
-
     .completed-projects__nav {
         order: 1;
         padding-left: 0;
     }
+
 
     /* section-3 online-control */
     .online-control {
@@ -201,7 +197,7 @@
     }
 
     .deal-steps__discount-container {
-        width: 450px;
+        width: 430px;
         margin-right: auto;
         margin-left: auto;
         padding: 0;
@@ -212,25 +208,44 @@
         line-height: 22px;
     }
 
+
     /* section-6 we-realize-fantasies */
     .we-realize-fantasies {
         padding-top: 30px;
     }
 
     .we-realize-fantasies__container {
+        max-width: 600px;
+    }
+
+    .we-realize-fantasies__title {
+        margin-right: 10px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .we-realize-fantasies__list {
+        font-size: 16px;
+        line-height: 38px;
+    }
+
+
+    /* section-7 clients */
+    .clients__list {
+        gap: 20px;
         max-width: 640px;
+    }
+
+    .clients__card-warp {
+        width: 300px;
     }
 
 
     /* section-8 contact-us */
     .contact-us__map-warp {
-        width: 620px;
+        width: 430px;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .contact-us__map-img {
-
     }
 
     .contact-us__title-form {
@@ -285,10 +300,6 @@
 
     .contact-us__button {
         margin-bottom: 40px;
-    }
-
-    .contact-us__address {
-        /* padding-top: 100px; */
     }
 
 }

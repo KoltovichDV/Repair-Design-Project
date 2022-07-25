@@ -8,6 +8,7 @@
         display: none;
     }
 
+
     /* header */
     .header__container {
         max-width: 1000px;
@@ -23,6 +24,7 @@
         gap: 40px;
         margin-right: 55px;
     }
+
 
     /* section-1 turnkey-repair */
     .turnkey-repair {
@@ -87,6 +89,7 @@
         line-height: 34px;
     }
 
+
     /* section-4 types-of-repair */
     .types-of-repair__list {
         max-width: 1000px;
@@ -100,7 +103,6 @@
         align-items: flex-start;
         align-items: center;
     }
-
 
     .types-of-repair__img {
         width: 300px;
@@ -133,7 +135,6 @@
         width: 900px;
         padding-left: 50%;
     }
-
 
     .deal-steps__discount-container {
         width: 1000px;
@@ -179,6 +180,7 @@
         gap: 20px;
     }
 
+
     /* section-7 clients */
     .clients__list {
         gap: 20px;
@@ -193,6 +195,7 @@
         padding-bottom: 60px;
     }
 
+    
     /* section-8 contact-us */
     .contact-us__map-warp {
         width: 650px;
