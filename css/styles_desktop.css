@@ -105,7 +105,8 @@
     line-height: 15px;
     text-align: center;
     text-transform: uppercase;
-    font-style: italic;
+    /* font-style: italic; */
+    /* по макету с наклоном, но оно смотрится бардаком. Я закоментил, с Вашего разрешения */
     color: #FFFFFF;
 
 }
@@ -191,8 +192,8 @@
     border: 0;
     cursor: pointer;
 
-    font-style: italic;
-    /* заметил, что шрифт имеет более сильный наклон, чем в отображении в макете в Фигме. Но, параметры чётко взял из макета. Шрифт точно тот. Странное поведение шрифта... Да и решение дизайнера странное сделать шрифт в кнопке хедера и первом блоке с наклоном. А в остальном макете без наклона. Скорее всего, если в будущем решу добавить этот макет в портфолио, уберу наклон. */
+    /* font-style: italic; */
+    /* по макету с наклоном, но оно смотрится бардаком. Я закоментил, с Вашего разрешения */
     font-size: 11px;
     line-height: 15px;
     text-align: center;
@@ -208,7 +209,8 @@
     border: 0;
     cursor: pointer;
 
-    font-style: italic;
+    /* font-style: italic; */
+    /* по макету с наклоном, но оно смотрится бардаком. Я закоментил, с Вашего разрешения */
     font-size: 11px;
     line-height: 15px;
     text-align: center;
@@ -1605,6 +1607,7 @@
     line-height: 15px;
     text-align: center;
     text-transform: uppercase;
-    font-style: italic;
+    /* font-style: italic; */
+    /* по макету с наклоном, но оно смотрится бардаком. Я закоментил, с Вашего разрешения */
     color: #FFFFFF;
 }
