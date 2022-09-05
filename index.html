@@ -70,9 +70,9 @@
 
         <section class="completed-projects">
             <div class="completed-projects__container">
-                <ul class="completed-projects__top-nav">
+                <ul id="city-list" class="completed-projects__top-nav">
                     <li>
-                        <button class="completed-projects__button-top-nav--active">Rostov-on-Don, Admiral</button>
+                        <button class="completed-projects__button-top-nav completed-projects__button-top-nav--active">Rostov-on-Don, Admiral</button>
                     </li>
                     <li>
                         <button class="completed-projects__button-top-nav">Sochi Thieves</button>
@@ -97,31 +97,31 @@
                     <dl class="completed-projects__dl">
                         <div>
                             <dt class="completed-projects__dt">City:</dt>
-                            <dd class="completed-projects__dd">Rostov-on-Don LCD admiral</dd>
+                            <dd id="city-name" class="completed-projects__dd">Rostov-on-Don LCD admiral</dd>
                         </div>
 
                         <div>
                             <dt class="completed-projects__dt">apartment area:</dt>
-                            <dd class="completed-projects__dd">81 m2</dd>
+                            <dd id="area-value" class="completed-projects__dd">81 m2</dd>
                         </div>
 
                         <div>
                             <dt class="completed-projects__dt">Repair time:</dt>
-                            <dd class="completed-projects__dd">3.5 months</dd>
+                            <dd id="repair-time-value" class="completed-projects__dd">3.5 months</dd>
                         </div>
 
                         <div>
                             <dt class="completed-projects__dt">Repair Cost:</dt>
-                            <dd class="completed-projects__dd">Upon request</dd>
+                            <dd id="cost-value" class="completed-projects__dd">Upon request</dd>
                         </div>
                     </dl>
 
                     <div class="completed-projects__nav">
-                        <button class="completed-projects__button-nav" aria-label="back">
+                        <button id="back" class="completed-projects__button-nav" aria-label="back">
                             <img src="./img/icon/icon_arrow-left.svg" alt="icon arrow left to back project">
                         </button>
 
-                        <div class="completed-projects__nav-points">
+                        <div id="point-list" class="completed-projects__nav-points">
                             <button class="completed-projects__button-nav" aria-label="selected slide">
                                 <img src="./img/icon/icon_point_active.svg" alt="icon active project">
                             </button>
@@ -135,7 +135,7 @@
                             </button>
                         </div>
 
-                        <button class="completed-projects__button-nav" aria-label="forward">
+                        <button id="forward" class="completed-projects__button-nav" aria-label="forward">
                             <img src="./img/icon/icon_arrow-right.svg" alt="icon arrow right to next project">
                         </button>
                     </div>
@@ -143,16 +143,16 @@
 
                     <div class="completed-projects__img-box">
                         <picture class="completed-projects__slide">
-                            <source srcset="./img/slide2-m.jpg" media="(max-width: 1255px)">
-                            <img src="./img/slide1.jpg" alt="interior at the window of the Аdmiral project">
+                            <source id="slide-img-mobile" srcset="./img/slide2-m.jpg" media="(max-width: 1255px)">
+                            <img id="slide-img-desktop" src="./img/slide1.jpg" alt="interior at the window of the Аdmiral project">
                         </picture>
                         <!-- подмена картинки для мобильной версии. Странно, что они разные у дизайнера в макете. Обратил внимание, что в слоях десктопной версии есть таже, что в мобильной версии, но скрыта верхним слоем. Использую в проекте 2 варината (через тег picture и в css @media скрываю display: none и подменяю) -->
 
                         <div class="completed-projects__controls-mobile">
-                            <button class="completed-projects__button-mobile" aria-label="back">
+                            <button id="back-mobile" class="completed-projects__button-mobile" aria-label="back">
                                 <img src="./img/icon/icon_round_arrow-left.svg" alt="icon arrow left to back project">
                             </button>
-                            <button class="completed-projects__button-mobile" aria-label="forward">
+                            <button id="forward-mobile" class="completed-projects__button-mobile" aria-label="forward">
                                 <img src="./img/icon/icon_round_arrow-right.svg" alt="icon arrow right to next project">
                             </button>
                             <!-- здесь тоже, кнопки смены проектов и слайдов для мобильной версии сопроводил поясняющим описанием, если картинки заглючат и не загрузятся -->

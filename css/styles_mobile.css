@@ -15,7 +15,6 @@
         display: none;
     }
 
-
     /* объекты, которые показываются только в мобильной версии и другие корректировки в мобилке */
     .header {
         position: fixed;
@@ -284,7 +283,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 138.72%;
-        
+
         color: #FFFFFF;
     }
 
